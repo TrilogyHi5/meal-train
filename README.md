@@ -52,17 +52,16 @@
 
   Any questions about this project please contact the creator mmmatson at:
 
-  Any questions about this project please contact the creator jcgilbert70 at:
-  jcgilbert70@gmail.com
+  Any questions about this project please contact the creator jcgilbert70 at: jcgilbert70@gmail.com
 
 
-  Check out other repositories by jcgilbert70 at: https://github.com/jcgilbert70
+  Check out other repositories by aphinney0516 at: 
 
-  Check out other repositories by jcgilbert70 at: https://github.com/jcgilbert70
+  Check out other repositories by ebonygrrl at: 
 
-  Check out other repositories by jcgilbert70 at: https://github.com/jcgilbert70
+  Check out other repositories by flgaitan at: 
 
-  Check out other repositories by jcgilbert70 at: https://github.com/jcgilbert70
+  Check out other repositories by mmmatson at: 
 
   Check out other repositories by jcgilbert70 at: https://github.com/jcgilbert70
   
