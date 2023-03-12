@@ -22,4 +22,4 @@ export default {
     //         'item2':'item2'
     //     }
     // })
-}
+};
