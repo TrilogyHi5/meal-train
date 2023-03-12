@@ -24,4 +24,38 @@ function App() {
   );
 }
 
+function Form() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState(''); // Create a helper for this one?
+  const [age, setAge] = useState('');
+  return (
+    <div>
+      <label>
+        First Name:
+        <input value={firstName} onChange={e => setFirstName(e.target.value)} />
+      </label>
+      <label>
+        Last Name:
+      <input value={lastName} onChange={e => setLastName(e.target.value)} />
+      </label>
+      <label>
+        Email:
+        <input value={email} onChange={e => setEmail(e.target.value)} />
+      </label>
+      <label>
+        Password:
+        <input value={password} onChange={e => setPassword(e.target.value)} />
+      </label>
+      <label>
+        Age:
+        <input value={age} onChange={e => setAge(e.target.value)} />
+      </label>
+    </div>
+  )
+}
+
+Form();
+
 export default App;
