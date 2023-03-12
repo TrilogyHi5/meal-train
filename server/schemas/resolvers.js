@@ -2,9 +2,12 @@ const { User, MealPlan } = require('../models');
 
 const resolvers = {
     Query: {
-        // get user info
-        // xyz: async (parent, {}) => {}
+        // xyz: async () => {}
 
+        // get user info
+        user: async (parent, { userId }) => {
+            return User.findOne({ _id: userId});
+        },
         // get user food preferences
 
         // get user diet
@@ -14,10 +17,16 @@ const resolvers = {
     },
 
     Mutation: {
+        // xyz: async (parent, {}) => {}
+
         // post create new user
         addUser: async (parent, { firstName, lastName, email, password }) => {
-            return User.create();
+            const user = await User.create({ firstName, lastName, email, password });
+
+            return user;
         },
+        // post create user meal plan --> built with api?
+
         // put update user
 
         // put food preference

@@ -6,47 +6,47 @@ const bcrypt = require('bcrypt');
 const userSchema = new Schema({
     firstName: {
         type: String,
-        required: true,
+        // required: true, // disabled for dev
         trim: true,
     },
     lastName: {
         type: String,
-        required: true,
+        // required: true, // disabled for dev
         trim: true,
     },
     email: {
         type: String,
-        required: true,
+        // required: true, // disabled for dev
         unique: true,
-        validate: {
-            validator: (input) => {
-              return emailVal.test(input); 
-            },
-            message: 'Please use a valid email address.'
-        }
+        // validate: { // disabled for dev
+        //     validator: (input) => {
+        //       return emailVal.test(input); 
+        //     },
+        //     message: 'Please use a valid email address.'
+        // }
     },
     password: {
         type: String,
-        required: true,
-        minlength: 5,
+        // required: true, // disabled for dev
+        // minlength: 5 // disabled for dev
     },
     // subdocument
     properties: {
         height: {
             type: Number,
-            required: true
+            //required: true
         },
         weight: {
             type: Number,
-            required: true
+            //required: true
         },
         sex: {
             type: String,
-            required: true
+            //required: true
         },
         dateOfBirth: {
             type: Date,
-            required: true,
+            //required: true,
             trim: true
         },
         createdAt: {
@@ -56,7 +56,7 @@ const userSchema = new Schema({
         },
         activityLevel: {
             type: String,
-            required: true
+            //required: true
         },
         // not sure about these
         // preferences: {
