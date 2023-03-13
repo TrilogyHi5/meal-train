@@ -4,7 +4,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        user: async () => {
+        users: async () => {
             return User.find();
         },
 
@@ -29,8 +29,8 @@ const resolvers = {
     },
 
     Mutation: {
-        addUser: async (parent, { username, email, password }) => {
-            const user = await User.create({ username, email, password });
+        addUser: async (parent, { firstName, lastName, email, password }) => {
+            const user = await User.create({ firstName, lastName, email, password });
             const token = signToken(user);
             return { token, user };
         },
@@ -52,21 +52,29 @@ const resolvers = {
             return { token, user };
         },
 
-        // Mutation: {
-        //     // xyz: async (parent, {}) => {}
+        addUserProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
+            const userProps = await User.create({ height, weight, sex, dob, activityLevel });
 
-        //     // post create new user
-        //     addUser: async (parent, { firstName, lastName, email, password }) => {
-        //         const user = await User.create({ firstName, lastName, email, password });
+            return userProps;
+        },
+        updateUser: async (parent, { firstName, lastName, email, password }) => {
+            const updatedUser = await User.findOneAndUpdate({ firstName, lastName, email, password });
+            const token = signToken(updatedUser);
+            return { token, updatedUser };
+        },
 
-        //         return user;
-        //     },
+        addUpdatedProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
+            const updatedProps = await User.findByIdAndUpdate({ height, weight, sex, dob, activityLevel });
+
+            return updatedProps;
+        },
+
 
         // post create user meal plan --> built with api?
 
         //<-------------------------------------NEW CODE------------------------------------------------------------------------------->
             // Add a third argument to the resolver to access data in our `context`
-        // addMealPlan: async (parent, { profileId, MealPlan }, context) => {
+        // updateUser: async (parent, { firstName, lastName, email, password }, context) => {
         //     // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
         //     if (context.user) {
         //         return User.findOneAndUpdate(
@@ -83,6 +91,7 @@ const resolvers = {
         //     // If user attempts to execute this mutation and isn't logged in, throw an error
         //     throw new AuthenticationError('You need to be logged in!');
         // },
+
         // Set up mutation so a logged in user can only remove their profile and no one else's
         removeUser: async (parent, args, context) => {
             if (context.user) {
