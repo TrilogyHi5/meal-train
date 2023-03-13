@@ -34,16 +34,19 @@ const typeDefs = gql`
     }
 
     type Query {
+        users(): [User]
         user(userId: ID!): User
-        #me: Profile (hold for JWT integration)
+        #me: User (hold for JWT integration)
         meals: [MealPlan]
     }
 
     type Mutation {
-        addUser(firstName: String, lastName: String, email: String, password: String) : User
+        addUser(firstName: String, lastName: String, email: String, password: String) : Auth
         #login(email: String!, password: String!): Auth
         addUserProps(userId: ID!, height: Int, weight: Int, sex: String, dob: String, activityLevel: String) : User
-        #updateUser() 
+        #updateUser(firstName: String!, lastName: String!, email: String!, password: String!) : Auth 
+        #updateUserProps(height, weight, sex, dob, activityLevel): User
+        #removeUser(): User
     }
 `;
 

@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const emailVal = /[^\s]*@[a-z0-9.-]*/i;
+//const emailVal = /[^\s]*@[a-z0-9.-]*/i;
 
 const bcrypt = require('bcrypt');
 
@@ -18,6 +18,8 @@ const userSchema = new Schema({
         type: String,
         // required: true, // disabled for dev
         unique: true,
+        //in MongoDB we can use match as the validator, 1 step stopshop
+        //match: [/.+@.+\..+/, 'Must match an email address!'],
         // validate: { // disabled for dev
         //     validator: (input) => {
         //       return emailVal.test(input); 
@@ -78,7 +80,7 @@ const userSchema = new Schema({
         // collect array of daily meals from meal plan model
         meals: [{
             type: Schema.Types.ObjectId,
-            ref: 'MealPlan'
+            ref: 'mealPlan'
         }]
     }
 });
