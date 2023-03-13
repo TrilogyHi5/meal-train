@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import api from './API'
+import api from '../utils/API'
 
-const IndexPage = () => {
+const Ingredients = () => {
     // Create state variables
     let [responseData, setResponseData] = React.useState([]);
 
@@ -40,4 +40,4 @@ const IndexPage = () => {
     )
 }
 
-export default IndexPage;
+export default Ingredients;
