@@ -18,9 +18,9 @@ import './App.css';
 
 function App() {
   return (
-    <Login />,
-    <Signup />,
-    <Ingredients />
+    // <Login />,
+    <Signup />
+    // <Ingredients />
   );
 }
 
