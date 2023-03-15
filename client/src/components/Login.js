@@ -10,7 +10,7 @@ import { Switch } from '@headlessui/react'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-const Login = () => {
+const Login = (props) => {
   const [formState, setFormState] = useState({
     email: '',
     password: '',
@@ -41,7 +41,7 @@ const Login = () => {
       //   console.error(e);
       // }
 
-     } 
+    }
     catch (e) {
       console.error(e);
     }
@@ -139,12 +139,11 @@ const Login = () => {
           </div>
         </form>
       )}
-
-      {/* {error && (
+      {error && (
         <div className="my-3 p-3 bg-danger text-white">
           {error.message}
-        </div> */}
-       {/* )} */}
+        </div>
+      )}
     </div>
   );
 
