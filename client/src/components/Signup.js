@@ -96,7 +96,7 @@ const Signup = () => {
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
-                  value={formState.firstName}
+                  defaultValue={formState.firstName}
                   className="form-input block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   onChange={handleChange}
                 />
@@ -112,7 +112,7 @@ const Signup = () => {
                   name="last-name"
                   id="last-name"
                   autoComplete="family-name"
-                  value={formState.lastName}
+                  defaultValue={formState.lastName}
                   className="form-input block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   onChange={handleChange}
                 />
@@ -128,7 +128,7 @@ const Signup = () => {
                   name="email"
                   id="email"
                   autoComplete="email"
-                  value={formState.email}
+                  defaultValue={formState.email}
                   className="form-input block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   onChange={handleChange}
                 />
@@ -144,7 +144,7 @@ const Signup = () => {
                   name="password"
                   id="password"
                   autoComplete="password"
-                  value={formState.password}
+                  defaultValue={formState.password}
                   className="form-input block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   onChange={handleChange}
                 />
