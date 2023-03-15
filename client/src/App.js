@@ -27,7 +27,7 @@ function App() {
   return (
     <ApolloProvider client={apollo}>
 
-      <Login />
+      <Signup />
 
     </ApolloProvider>
   );
