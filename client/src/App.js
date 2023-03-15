@@ -28,6 +28,7 @@ function App() {
     <ApolloProvider client={apollo}>
 
       <Signup />
+      <Login />
 
     </ApolloProvider>
   );

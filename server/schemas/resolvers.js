@@ -34,23 +34,23 @@ const resolvers = {
             //const token = signToken(user);
             return user;
         },
-        // login: async (parent, { email, password }) => {
-        //     const user = await User.findOne({ email });
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
 
-        //     // if (!user) {
-        //     //     throw new AuthenticationError('No user found with this email address');
-        //     // }
+            // if (!user) {
+            //     throw new AuthenticationError('No user found with this email address');
+            // }
 
-        //     const correctPw = await user.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(password);
 
-        //     // if (!correctPw) {
-        //     //     throw new AuthenticationError('Incorrect credentials');
-        //     // }
+            if (!correctPw) {
+                throw new AuthenticationError('Incorrect credentials');
+            }
 
         //     //const token = signToken(user);
-
+                return { user };
         //     //return { token, user };
-        // },
+        },
 
         // addUserProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
         //     const userProps = await User.create({ height, weight, sex, dob, activityLevel });
