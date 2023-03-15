@@ -10,6 +10,7 @@ import {
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Signup from './components/Signup';
+import Login from './components/Login';
 //import Login from './pages/Login';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
@@ -26,7 +27,7 @@ function App() {
   return (
     <ApolloProvider client={apollo}>
 
-      <Signup />
+      <Login />
 
     </ApolloProvider>
   );
