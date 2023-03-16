@@ -33,7 +33,7 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    console.log(formState ,"formstate");
 
     try {
       const { data } = await addUser({
@@ -94,7 +94,7 @@ const Signup = () => {
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="first-name"
+                  name="firstName"
                   id="first-name"
                   autoComplete="given-name"
                   defaultValue={formState.firstName}
@@ -110,7 +110,7 @@ const Signup = () => {
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="last-name"
+                  name="lastName"
                   id="last-name"
                   autoComplete="family-name"
                   defaultValue={formState.lastName}
