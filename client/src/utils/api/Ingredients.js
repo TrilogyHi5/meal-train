@@ -30,20 +30,20 @@ export default function Ingredients() {
     }, []);
 
     //returns id, name, ingredients
-
-    return (
         
-        !foodList ? 'No food list.' :   
+    if(!foodList) return 'No food list.'
+
+    return (   
     
         <>
         <ul>
-            {foodList.map((data, index) => { 
+            {foodList.map(data => { 
                 return (
                     <>
-                    <li key={index}>{data.name}</li>
+                    <li key={data.id}>{data.name}</li>
                     <ul>
-                    {data.ingredients.map((item, index) => {
-                        return <li key={index}>{item.name}</li>
+                    {data.ingredients.map(item => {
+                        return <li key={item.id}>{item.name}</li>
                     })}
                     </ul>
                     </>
