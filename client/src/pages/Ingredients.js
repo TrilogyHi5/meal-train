@@ -1,27 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import api from '../utils/API'
+import getIngredients from '../utils/api/getIngredients'
 
 const Ingredients = () => {
     // Create state variables
-    let [responseData, setResponseData] = React.useState([]);
+    const [responseData, setResponseData] = useState([]);
 
     // fetches data
     const fetchData = () => {
-        //e.preventDefault()
-
-        api.getData()
-        .then((response)=>{
-            setResponseData(response.data);
-            console.log(response);
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-    }
-
-    useEffect(() => {
-        fetchData();
-      }, []);
+        getIngredients
 
     const style = { margin: '0 auto', width: '200px', textAlign: 'center' };
 
