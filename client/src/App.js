@@ -1,19 +1,15 @@
 //import logo from './logo.svg';
 import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
-//import Login from './pages/Login';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-//import Ingredients from './pages/Ingredients'
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
+//import Footer from './components/Footer';
+import Profile from './components/pages/Profile';
+import MealPlan from './components/pages/MealPlan';
 //import './App.css';
 
 
@@ -25,7 +21,26 @@ const apollo = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={apollo}>
-      <Navigation />
+      <Router>
+        <Navigation />
+
+          <Routes>
+
+            {/* <Route path='/' element={<Home />} /> */}
+
+            <Route path='/login' element={<Login />} />
+
+            <Route path='/signup' element={<Signup />} />
+
+            <Route path='/user/:userId' element={<Profile />} />
+
+            <Route path='/mealplan' element={<MealPlan />} />
+
+            {/* <Route path='/about' element={<About />} /> */}
+
+          </Routes>
+        {/* <Footer /> */}
+      </Router>
     </ApolloProvider>
   );
 }

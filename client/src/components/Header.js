@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   //ArrowPathIcon,
@@ -56,18 +57,19 @@ export default function Header({ currentPage, handlePageChange }) {
             </Transition>
           </Popover> */}
 
-          {/* <a href="#about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
-            About
-          </a> */}
-          <a href="#signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
-            Signup
-          </a>
-          <a href="#login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
-            Login
-          </a>
-          <a href="#mealplan" onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
-            Meal Plan
-          </a>
+            {/* <Link to="#about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
+              About
+            </Link> */}
+            <Link to="/signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
+              Signup
+            </Link>
+            <Link to="/login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
+              Login
+            </Link>
+            <Link to="/mealplan" onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'} text-sm font-semibold leading-6 text-gray-900" >
+              Meal Plan
+            </Link>
+
         </Popover.Group>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -94,30 +96,29 @@ export default function Header({ currentPage, handlePageChange }) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {/* <a
-                  href="#about"
+
+                {/* <Link to="/about"
                   onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
-                </a> */}
-                <a
-                  href="#login"
+                </Link> */}
+                <Link to="/login"
                   onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Login
-                </a>
-                <a
-                  href="#signup"
+                </Link>
+                <Link to="/signup"
                   onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Sign Up
-                </a>
-                <a
-                  href="#mealplan"
+                </Link>
+                <Link to="/mealplan"
                   onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Meal Plan
-                </a>
+                </Link>
+
+
               </div>
             </div>
           </div>
