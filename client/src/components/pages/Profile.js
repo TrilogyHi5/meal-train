@@ -9,10 +9,14 @@ const Profile = () => {
     const [result, setResult] = useState({});
     const [search, setSearch] = useState('');
 
+    // Fiama, this section is calling GetUser, but I couldn't get it to work.
+
     const searchUser = (query) =>
         GetUser.search(query)
             .then(res => setResult(res.data))
             .catch((err) => console.log(err));
+
+            
 
     useEffect(() => {
         searchUser('ol5z3L3JV0OO4ROrikB18');
@@ -20,12 +24,17 @@ const Profile = () => {
 
 
     // Handler for input changes to the search form
-    const handleInputChange = (e) => setSearch(e.target.value);
+    // !!!!THIS LINE IS NEEDED TO QUERY THE USER ID FROM BESPOKE/RAPID API!!!!
+    // MINIMIZE REQUEST BY STORING USER ID ON MONGO
+    //const handleInputChange = (e) => setSearch(e.target.value);
+
+    // TEMP LINE
+    const handleInputChange = (e) => setSearch('ol5z3L3JV0OO4ROrikB18');
 
     // Handler for what happens when the search form is submitted
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        searchUser(search);
+        searchUser(search); // query argument
     };
 
     const {
@@ -35,23 +44,27 @@ const Profile = () => {
         Sex = '',
         ActivityLevel = ''
     } = result;
-};
 
-return (
-    <>
-        <div>
-            <ProfileDetail
-                height={Height}
-                weight={Weight}
-                dob={DateOfBirth}
-                sex={Sex}
-                activity={ActivityLevel}
+    return (
+        <>
+            <div>
+                <ProfileDetail
+                    height={Height}
+                    weight={Weight}
+                    dob={DateOfBirth}
+                    sex={Sex}
+                    activity={ActivityLevel}
+                />
+            </div>
+
+            <div>Update Preferences</div>
+            <UpdateProfileForm
+                value={search}
+                handleInputChange={handleInputChange}
+                handleFormSubmit={handleFormSubmit}
             />
-        </div>
-
-        <div>Update Preferences</div>
-        <UpdateProfileForm
-    </>
-)
+        </>
+    );
+};
 
 export default Profile;

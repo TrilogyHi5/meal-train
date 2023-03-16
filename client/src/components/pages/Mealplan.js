@@ -1,6 +1,7 @@
 import Ingredients from '../../utils/api/Ingredients';
 import AddUser from '../../utils/api/AddUser';
 import GetUser from '../../utils/api/GetUser';
+import Profile from './Profile';
 
 const Mealplan = () => {    
     
@@ -15,7 +16,8 @@ const Mealplan = () => {
                           
             {/* <Ingredients /> */}
             {/* <AddUser />  DO NOT TURN ON! CREATES NEW USER ON REFRESH! */} 
-            <GetUser />
+            {/* <Profile /> */}
+
 
         </div>
     )
