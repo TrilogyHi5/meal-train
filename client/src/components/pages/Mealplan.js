@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import api from '../utils/API'
+import api from '../../utils/API'
 
-const Ingredients = () => {
+const Mealplan = () => {
     // Create state variables
     let [responseData, setResponseData] = React.useState([]);
 
@@ -40,4 +40,4 @@ const Ingredients = () => {
     )
 }
 
-export default Ingredients;
+export default Mealplan;
