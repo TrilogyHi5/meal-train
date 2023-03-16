@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import GetUser from '../../utils/api/GetUser';
+import getUser from '../../utils/api/GetUser';
 import ProfileDetail from '../ProfileDetail';
 import UpdateProfileForm from '../UpdateProfileForm';
 
@@ -12,7 +12,7 @@ const Profile = () => {
     // Fiama, this section is calling GetUser, but I couldn't get it to work.
 
     const searchUser = (query) =>
-        GetUser.search(query)
+        getUser(query)
             .then(res => setResult(res.data))
             .catch((err) => console.log(err));
 

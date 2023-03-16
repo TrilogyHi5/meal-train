@@ -6,6 +6,7 @@ import Mealplan from './pages/Mealplan';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 
+
 export default function Navigation() {
   const [currentPage, setCurrentPage] = useState('HomePage');
 
