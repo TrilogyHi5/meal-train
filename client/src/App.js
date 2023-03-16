@@ -9,8 +9,7 @@ import {
 // import { setContext } from '@apollo/client/link/context';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// import Signup from './components/Signup';
-// import Login from './components/Login';
+import Navigation from './components/Navigation';
 //import Login from './pages/Login';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
@@ -27,9 +26,9 @@ function App() {
   return (
     <ApolloProvider client={apollo}>
 
-      {/* <Signup />
-      <Login /> */}
-    <Ingredients />
+      <Signup />
+      <Login />
+
     </ApolloProvider>
   );
 }

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD:client/src/pages/Ingredients.js
 import getIngredients from '../utils/api/getIngredients'
+=======
+import api from '../../utils/API'
+>>>>>>> c25ce4443ab575acaa2754422ed79f9d7c6de239:client/src/components/pages/Mealplan.js
 
-const Ingredients = () => {
+const Mealplan = () => {
     // Create state variables
     const [responseData, setResponseData] = useState([]);
 
@@ -26,4 +30,4 @@ const Ingredients = () => {
     )
 }
 
-export default Ingredients;
+export default Mealplan;
