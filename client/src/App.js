@@ -13,7 +13,7 @@ import Navigation from './components/Navigation';
 //import Login from './pages/Login';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
-import Ingredients from './pages/Ingredients'
+//import Ingredients from './pages/Ingredients'
 //import './App.css';
 
 
@@ -25,10 +25,7 @@ const apollo = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={apollo}>
-
-      <Signup />
-      <Login />
-
+      <Navigation />
     </ApolloProvider>
   );
 }
