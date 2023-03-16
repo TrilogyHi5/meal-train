@@ -1,3 +1,4 @@
+
 //const { AuthenticationError } = require('apollo-server-express');
 const { User, MealPlan } = require('../models');
 //const { signToken } = require('../utils/auth');
@@ -30,6 +31,7 @@ const resolvers = {
 
     Mutation: {
         addUser: async (parent, { firstName, lastName, email, password }) => {
+            console.log(firstName, lastName, "First and last name")
             const user = await User.create({ firstName, lastName, email, password });
             //const token = signToken(user);
             return user;
@@ -37,9 +39,9 @@ const resolvers = {
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
-            // if (!user) {
-            //     throw new AuthenticationError('No user found with this email address');
-            // }
+            if (!user) {
+                throw new AuthenticationError('No user found with this email address');
+            }
 
             const correctPw = await user.isCorrectPassword(password);
 
@@ -63,7 +65,7 @@ const resolvers = {
         //     //return { token, updatedUser };
         // },
 
-        // addUpdatedProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
+        // updateProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
         //     const updatedProps = await User.findByIdAndUpdate({ height, weight, sex, dob, activityLevel });
 
         //     return updatedProps;
