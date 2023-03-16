@@ -34,6 +34,7 @@ const userSchema = new Schema({
     },
     // subdocument
     properties: {
+        //do not use requires in order to be able to use these for second form after created user/logged in
         height: {
             type: Number,
             //required: true
