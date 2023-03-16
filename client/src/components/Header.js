@@ -63,15 +63,15 @@ export default function Header({ currentPage, handlePageChange }) {
           {/* <a href="#about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 text-gray-900" >
             About
           </a> */}
-          <a href="#signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
+          <Link to="/signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
             Sign up
-          </a>
-          <a href="#login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
+            </Link>
+            <Link to="/login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
           Log in
-          </a>
-          <a href="#mealplan" onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          </Link>
+          <Link to="/mealplan" onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
             Meal Plan
-          </a>
+            </Link>
         </Popover.Group>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -104,23 +104,20 @@ export default function Header({ currentPage, handlePageChange }) {
                 >
                   About
                 </a> */}
-                <a
-                  href="#login"
+                <Link to="/login"
                   onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-500 hover:bg-blue-800 text-white rounded px-4 py-2">
                   Login
-                </a>
-                <a
-                  href="#signup"
+                  </Link>
+                <Link to="/signup"
                   onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
                 >
                   Sign Up
-                </a>
-                <a
-                  href="#mealplan"
+                  </Link>
+                <Link to="/mealplan"
                   onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
                 >
                   Meal Plan
-                </a>
+                  </Link>
               </div>
             </div>
           </div>
