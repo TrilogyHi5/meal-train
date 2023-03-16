@@ -16,7 +16,7 @@ const Mealplan = () => {
                           
             {/* <Ingredients /> */}
             {/* <AddUser />  DO NOT TURN ON! CREATES NEW USER ON REFRESH! */} 
-            {/* <Profile /> */}
+            <Profile />
 
 
         </div>
