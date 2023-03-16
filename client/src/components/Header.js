@@ -84,6 +84,7 @@ export default function Header({ currentPage, handlePageChange }) {
                 className="h-8 w-auto"
                 src={logo}
                 alt=""
+                
               />
             </a> */}
             <button
