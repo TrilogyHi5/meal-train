@@ -1,41 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import api from '../../utils/API'
+import Ingredients from '../../utils/api/Ingredients';
+import AddUser from '../../utils/api/AddUser';
+import GetUser from '../../utils/api/GetUser';
+import Profile from './Profile';
 
-const Mealplan = () => {
-    // Create state variables
-    let [responseData, setResponseData] = React.useState([]);
+const Mealplan = () => {    
+    
+        // NEW USER ID: ol5z3L3JV0OO4ROrikB18
+        // NEW USER ID: Gi9lG9yTEWfDApLoejawo
 
-    // fetches data
-    const fetchData = () => {
-        //e.preventDefault()
-
-        api.getData()
-        .then((response)=>{
-            setResponseData(response.data);
-            console.log(response);
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-    }
-
-    useEffect(() => {
-        fetchData();
-      }, []);
-
-    const style = { margin: '0 auto', width: '200px', textAlign: 'center' };
+    const style = { margin: '0 auto', width: '80%' };
 
     return (
-        <div style={style}>
-            WE DID IT!
-            {responseData.length}
-            {/* <h1>{responseData.title}</h1>
 
-            <button onClick={(e) => fetchData(e)} type='button'>Click Me For Data</button>
+        <div style={style}>  
+                          
+            {/* <Ingredients /> */}
+            {/* <AddUser />  DO NOT TURN ON! CREATES NEW USER ON REFRESH! */} 
+            {/* <Profile /> */}
 
-            {responseData.dates && responseData.dates.map(date => {
-                return <p>{date}</p>
-            })} */}
+
         </div>
     )
 }

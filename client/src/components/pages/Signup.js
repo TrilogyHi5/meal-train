@@ -4,13 +4,14 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 // import Auth from '../utils/auth';
 // import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
+// import { ChevronDownIcon } from '@heroicons/react/20/solid'
+// import { Switch } from '@headlessui/react'
 
 //tailwind css code
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ')
+// }
+
 const Signup = () => {
   const [formState, setFormState] = useState({
     firstName: '',
