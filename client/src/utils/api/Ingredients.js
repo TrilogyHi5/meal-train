@@ -12,7 +12,7 @@ export default function Ingredients() {
             'headers': {
                 'accept-language': 'en',
                 'x-rapidapi-host':'bespoke-diet-generator.p.rapidapi.com',
-                'x-rapidapi-key': process.env.REACT_APP_GET_INGREDIENTS_KEY
+                // 'x-rapidapi-key': process.env.REACT_APP_API_KEY
             }
         };
 
@@ -40,7 +40,9 @@ export default function Ingredients() {
             {foodList.map(data => { 
                 return (
                     <>
+                    {/* Category */}
                     <li key={data.id}>{data.name}</li>
+                   {/* Ingredient in category */}
                     <ul>
                     {data.ingredients.map(item => {
                         return <li key={item.id}>{item.name}</li>
