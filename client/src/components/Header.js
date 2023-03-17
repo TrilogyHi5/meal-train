@@ -61,9 +61,9 @@ export default function Header({ currentPage, handlePageChange }) {
             </Transition>
           </Popover> */}
 
-          {/* <a href="#about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 text-gray-900" >
+          <Link to="/about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 text-gray-900" >
             About
-          </a> */}
+          </Link>
           <Link to="/signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
             Sign up
             </Link>
@@ -100,12 +100,11 @@ export default function Header({ currentPage, handlePageChange }) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {/* <a
-                  href="#about"
-                  onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
+                 
+                 <Link to="/about"
+                  onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   About
-                </a> */}
+                </Link>
                 <Link to="/login"
                   onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-500 hover:bg-blue-800 text-white rounded px-4 py-2">
                   Login
