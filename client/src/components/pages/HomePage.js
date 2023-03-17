@@ -20,7 +20,7 @@ function HomePage() {
           <p className="text-lg mb-8">Are you frustrated with fad diets and ready to try something different? 
               Then it is time to train yourself to diet differently, with Meal Train!
               Meal Train takes all of the leg work out of dieting and gives you complete daily meal plans 
-              that are easy to cook made from healthy common grocery store ingredients. </p>
+              that are easy to cook and made from healthy common grocery store ingredients. </p>
         </div>
       </div>
       <div className="flex justify-center items-center">

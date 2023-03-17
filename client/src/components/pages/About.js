@@ -1,8 +1,43 @@
 import React, { useState } from 'react';
-
-export default function About() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+import People from '../TeamInfo';
   
+    const people = [
+      {
+        name: 'Andy Phinney',
+        role: 'Content Developer',
+        imageUrl:
+          'client/src/utils/images/andy.jpg',
+      },
+      {
+        name: 'Aletoria Booker',
+        role: 'Backend Developer',
+        imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+      {
+        name: 'Fiama Gaitan Rodriguez',
+        role: 'Backend Developer',
+        imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+      {
+        name: 'Maggie Matson',
+        role: 'Frontend Developer',
+        imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+      {
+        name: 'Jeffrey Gilbert',
+        role: 'Frontend Developer',
+        imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    ];
+
+    export default function About() {
+
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
     return (
       <div className="bg-white">
         <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -79,46 +114,7 @@ export default function About() {
             </svg>
           </div>
         </div>
-      </div>
-    )
-  }
-
-  const people = [
-    {
-      name: 'Andy Phinney',
-      role: 'Content Developer',
-      imageUrl:
-        'client/src/utils/images/andy.jpg',
-    },
-    {
-      name: 'Aletoria Booker',
-      role: 'Backend Developer',
-      imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Fiama Gaitan Rodriguez',
-      role: 'Backend Developer',
-      imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Maggie Matson',
-      role: 'Frontend Developer',
-      imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-    {
-      name: 'Jeffrey Gilbert',
-      role: 'Frontend Developer',
-      imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  ]
-
-  export default function teamPics() {
-    return (
-      <div className="bg-white py-24 sm:py-32">
+        <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet the Meal Train team!</h2>
@@ -127,19 +123,10 @@ export default function About() {
             </p>
           </div>
           <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-            {people.map((person) => (
-              <li key={person.name}>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
-                  <div>
-                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                    <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
+            <People people={people} />
           </ul>
         </div>
       </div>
+      </div>
     )
-  }
+  };

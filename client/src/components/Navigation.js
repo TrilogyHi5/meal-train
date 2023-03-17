@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
-// import About from './pages/About';
+import About from './pages/About';
 import HomePage from  './pages/HomePage';
 import Mealplan from './pages/MealPlan';
 import Signup from './pages/Signup';
@@ -12,9 +12,9 @@ export default function Navigation() {
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
-    // if (currentPage === 'About') {
-    //   return <About />;
-    // }
+    if (currentPage === 'About') {
+      return <About />;
+    }
     if (currentPage === 'HomePage') {
       return <HomePage />;
     }
