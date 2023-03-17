@@ -18,7 +18,6 @@ const Mealplan = () => {
             {/* <AddUser />  DO NOT TURN ON! CREATES NEW USER ON REFRESH! */} 
             <Profile />
 
-
         </div>
     )
 }

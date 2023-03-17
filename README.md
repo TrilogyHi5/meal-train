@@ -1,7 +1,5 @@
-  # Meal-Train
-  
+  # <Meal-Train>
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
  
   ## Description
@@ -67,6 +65,8 @@
   
   ## License: MIT
   
-  MIT License Link: https://opensource.org/licenses/MIT
+  MIT License Link:
+  - [License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  - (https://opensource.org/licenses/MIT)
 
   
