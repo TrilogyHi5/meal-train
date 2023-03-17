@@ -9,7 +9,7 @@
   Useful app for anyone who needs to create specialized diets.
  
   ## Table of Contents
-  - [Installatoin](#installation)
+  - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Links](#links)

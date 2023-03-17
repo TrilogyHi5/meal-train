@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import Header from './Header';
 // import About from './pages/About';
-import Mealplan from './pages/Mealplan';
+import HomePage from  './pages/HomePage';
+import Mealplan from './pages/MealPlan';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 
+
 export default function Navigation() {
-  const [currentPage, setCurrentPage] = useState('Mealplan');
+  const [currentPage, setCurrentPage] = useState('HomePage');
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     // if (currentPage === 'About') {
     //   return <About />;
     // }
+    if (currentPage === 'HomePage') {
+      return <HomePage />;
+    }
     if (currentPage === 'Signup') {
       return <Signup />;
     }
@@ -33,4 +38,3 @@ export default function Navigation() {
     </div>
   );
 }
-
