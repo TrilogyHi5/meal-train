@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 // import About from './pages/About';
 import HomePage from  './pages/HomePage';
-import Mealplan from './pages/Mealplan';
+import Mealplan from './pages/MealPlan';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 
