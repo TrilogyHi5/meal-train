@@ -40,8 +40,8 @@ import People from '../TeamInfo';
 
     return (
       <div className="bg-white">
-        <div className="relative isolate px-6 pt-14 lg:px-8">
-          <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div className="relative isolate px-6 pt-2 lg:px-8">
+          {/* <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
             <svg
               className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
               viewBox="0 0 1155 678"
@@ -65,7 +65,7 @@ import People from '../TeamInfo';
                 </linearGradient>
               </defs>
             </svg>
-          </div>
+          </div> */}
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

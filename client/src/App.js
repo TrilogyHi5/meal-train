@@ -10,6 +10,8 @@ import Signup from './components/pages/Signup';
 //import Footer from './components/Footer';
 import Profile from './components/pages/Profile';
 import MealPlan from './components/pages/MealPlan';
+import About from './components/pages/About';
+import HomePage from './components/pages/HomePage';
 //import './App.css';
 
 
@@ -24,9 +26,9 @@ function App() {
       <Router>
         <Navigation />
 
-          <Routes>
+          {/* <Routes>
 
-            {/* <Route path='/' element={<Home />} /> */}
+            <Route path='/' element={<HomePage />} />
 
             <Route path='/login' element={<Login />} />
 
@@ -36,9 +38,9 @@ function App() {
 
             <Route path='/mealplan' element={<MealPlan />} />
 
-            {/* <Route path='/about' element={<About />} /> */}
+            <Route path='/about' element={<About />} />
 
-          </Routes>
+          </Routes> */}
         {/* <Footer /> */}
       </Router>
     </ApolloProvider>

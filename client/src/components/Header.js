@@ -61,7 +61,7 @@ export default function Header({ currentPage, handlePageChange }) {
             </Transition>
           </Popover> */}
 
-          <Link to="/about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 text-gray-900" >
+          <Link to="/about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
             About
           </Link>
           <Link to="/signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
@@ -70,7 +70,7 @@ export default function Header({ currentPage, handlePageChange }) {
             <Link to="/login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
           Log in
           </Link>
-          <Link to="/mealplan" onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          <Link to="/mealplan" onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
             Meal Plan
             </Link>
         </Popover.Group>
@@ -115,7 +115,7 @@ export default function Header({ currentPage, handlePageChange }) {
                   Sign Up
                   </Link>
                 <Link to="/mealplan"
-                  onClick={() => handlePageChange('Mealplan')} className="{currentPage === 'Mealplan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
+                  onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
                 >
                   Meal Plan
                   </Link>
