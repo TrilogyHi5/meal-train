@@ -32,9 +32,7 @@ export default function About() {
             </svg>
           </div>
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="text-center"
-            // Insert an image of a Meal Train meal here
-            >
+            <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 More About Meal Train
               </h1>
@@ -53,13 +51,6 @@ export default function About() {
               When you set up your profile you pick from one of three basic meal templates: mediterranean, low-carb, and weight maintenance. 
               You can also feel good about what you eat as most of the ingredients used in Meal Train are minimally processed and found in all major supermarket chains.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    Meet Our Team 
-                    {/* // Insert images, names, titles, and locations of each team member here */}
-                </h1>
-                
-              </div>
             </div>
           </div>
           <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -92,32 +83,63 @@ export default function About() {
     )
   }
 
-  // Below is what I intended to put on the front page, I'm keeping it here until I know where to put it
+  const people = [
+    {
+      name: 'Andy Phinney',
+      role: 'Content Developer',
+      imageUrl:
+        'client/src/utils/images/andy.jpg',
+    },
+    {
+      name: 'Aletoria Booker',
+      role: 'Backend Developer',
+      imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Fiama Gaitan Rodriguez',
+      role: 'Backend Developer',
+      imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Maggie Matson',
+      role: 'Frontend Developer',
+      imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Jeffrey Gilbert',
+      role: 'Frontend Developer',
+      imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+  ]
 
-  // <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-  //         <div className="text-center">
-  //           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-  //             Meal Train - Train yourself to diet differently
-  //           </h1>
-  //           <p className="mt-6 text-lg leading-8 text-gray-600">
-  //           Are you frustrated with fad diets and ready to try something different? 
-  //           Then it is time to train yourself to diet differently, with Meal Train!
-  //           Meal Train takes all of the leg work out of dieting and gives you complete daily meal plans 
-  //           that are easy to cook made from healthy common grocery store ingredients.
-  //           </p>
-  //           <div className="mt-10 flex items-center justify-center gap-x-6">
-  //             <a
-  //             // Hook up to sign up component below
-  //               href="#"
-  //               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-  //             >
-  //               Sign up!
-  //             </a>
-  //             <a href="#" className="text-sm font-semibold leading-6 text-gray-900"
-  //             // Hook up to the about page below
-  //             >
-  //               Learn more <span aria-hidden="true">→</span>
-  //             </a>
-  //           </div>
-  //         </div>
-  //       </div>
+  export default function teamPics() {
+    return (
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet the Meal Train team!</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              We're just a bunch of regular people.
+            </p>
+          </div>
+          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+            {people.map((person) => (
+              <li key={person.name}>
+                <div className="flex items-center gap-x-6">
+                  <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+                  <div>
+                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                    <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )
+  }
