@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import icon from '../utils/images/icon.png' // import icon image
+import 'tailwindcss/tailwind.css'; // import Tailwind CSS
+import backgroundImage from '../utils/images/background4.jpg'; // import background image
+
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -13,19 +16,28 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
+
 export default function Header({ currentPage, handlePageChange }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
+    <header className="bg-white fixed top-0 left-0 right-0 z-10">
       <nav className="flex items-center justify-between py-4 px-8 bg-green-800 text-white" aria-label="Global">
-      <img src={icon} className="w-9 h-9">
-      
-      </img>
+        <Link to="/homepage" onClick={() => handlePageChange('HomePage')} className="{currentPage === 'HomePage' ? 'nav-link active' : 'nav-link'} flex flex-row">
+          <img src={icon} className="w-9 h-9 animate-rock" >
+
+
+
+          </img>
+          <div className="flex-1">
+            <p className="flex items-center h-full text-white font-display text-4xl text-center pl-4" >Meal Train</p>
+          </div>
+        </Link>
+
         <div className="flex lg:flex-1">
           {/* <a href="#about" className="-m-1.5 p-1.5">
             <span className="sr-only">Meal Train</span>
@@ -61,23 +73,24 @@ export default function Header({ currentPage, handlePageChange }) {
             </Transition>
           </Popover> */}
 
-          <Link to="/about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          <Link to="/about" onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
             About
           </Link>
-          <Link to="/signup"  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
+          <Link to="/signup" onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
             Sign up
-            </Link>
-            <Link to="/login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
-          Log in
           </Link>
-          <Link to="/user/:userId" onClick={() => handlePageChange('Settings')} className="{currentPage === 'Settings' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          <Link to="/login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
+            Log in
+          </Link>
+          <Link to="/mealplan" onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
             Meal Plan
-            </Link>
+          </Link>
+
         </Popover.Group>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto max-h-80 bg-top-right top-0 right-0 w-56"style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className="flex items-center justify-between">
             {/* <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -90,7 +103,7 @@ export default function Header({ currentPage, handlePageChange }) {
             </a> */}
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -99,26 +112,37 @@ export default function Header({ currentPage, handlePageChange }) {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                 
-                 <Link to="/about"
-                  onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  About
-                </Link>
-                <Link to="/login"
-                  onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hidden md:block bg-blue-500 hover:bg-blue-800 text-white rounded px-4 py-2">
-                  Login
+              <div>
+                
+
+                <div>
+                  <Link to="/about"
+                    onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300 mx-2">
+                    About
                   </Link>
-                <Link to="/signup"
-                  onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
-                >
-                  Sign Up
+                </div>
+
+                <div>
+                  <Link to="/login"
+                    onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-green-100 inline-block my-2 bg-blue-500 hover:bg-gray-300 mx-2">
+                    Login
                   </Link>
-                <Link to="/user/:userId"
-                  onClick={() => handlePageChange('Settings')} className="{currentPage === 'Settings' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
-                >
-                  Meal Plan
+                </div>
+
+                <div>
+                  <Link to="/signup"
+                    onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block my-2 bg-green-100 hover:bg-gray-300 mx-2">
+                    Sign Up
                   </Link>
+                </div>
+
+                <div>
+                  <Link to="/mealplan"
+                    onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block bg-green-100 my-2 hover:bg-gray-300 mx-2">
+                    Meal Plan
+                  </Link>
+                </div>
+
               </div>
             </div>
           </div>
@@ -127,4 +151,3 @@ export default function Header({ currentPage, handlePageChange }) {
     </header>
   )
 }
-
