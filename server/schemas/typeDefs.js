@@ -36,6 +36,7 @@ const typeDefs = gql`
     type Query {
         #users(): [User]
         user(userId: ID!): User
+        #Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
         #me: User (hold for JWT integration)
         meals: [MealPlan]
     }
@@ -43,10 +44,12 @@ const typeDefs = gql`
     type Mutation {
         addUser(firstName: String, lastName: String, email: String, password: String) : User
         login(email: String!, password: String!): User
+        addMeals(userId: ID!, meal: String!): User
+        removeUser: User
+        removeMeals(meal: String!): User
         #Auth was turn on That's why Apollo Server wouldn't launch ---> login(email: String!, password: String!): Auth
-        #addUserProps(userId: ID!, height: Int, weight: Int, sex: String, dob: String, activityLevel: String) : User
+        #addProperties(userId: ID!, height: Int, weight: Int, sex: String, dob: String, activityLevel: String) : User
         #updateUser(firstName: String!, lastName: String!, email: String!, password: String!) : Auth 
-        #updateUserProps(height, weight, sex, dob, activityLevel): User
         #removeUser(): User
     }
 `;
