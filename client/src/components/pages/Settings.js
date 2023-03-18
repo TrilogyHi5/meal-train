@@ -3,7 +3,7 @@ import AddUser from '../../utils/api/AddUser';
 import GetUser from '../../utils/api/GetUser';
 import Profile from './Profile';
 
-const Mealplan = () => {    
+const Settings = () => {    
     
         // NEW USER ID: ol5z3L3JV0OO4ROrikB18
         // NEW USER ID: Gi9lG9yTEWfDApLoejawo
@@ -22,4 +22,4 @@ const Mealplan = () => {
     )
 }
 
-export default Mealplan;
+export default Settings;
