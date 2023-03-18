@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import People from '../TeamInfo';
-  
+import andy from '../../utils/images/andy.jpg';
+
     const people = [
       {
         name: 'Andy Phinney',
         role: 'Content Developer',
-        imageUrl:
-          'client/src/utils/images/andy.jpg',
+        imageUrl: andy,
       },
       {
         name: 'Aletoria Booker',
@@ -15,7 +15,7 @@ import People from '../TeamInfo';
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
       },
       {
-        name: 'Fiama Gaitan Rodriguez',
+        name: 'Fiama Gaitan',
         role: 'Backend Developer',
         imageUrl:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',

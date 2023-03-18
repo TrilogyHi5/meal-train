@@ -113,6 +113,11 @@ const resolvers = {
         //     throw new AuthenticationError('You need to be logged in!');
         // },
     },
+    // delete user
+
+    removeUser: async (parent, { userId }) => {
+        return User.findOneAndDelete({ _id: userId });
+    },
 };
 
 // put update user

@@ -70,7 +70,7 @@ export default function Header({ currentPage, handlePageChange }) {
             <Link to="/login" onClick={() => handlePageChange('Login')} className="{currentPage === 'Login' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
           Log in
           </Link>
-          <Link to="/mealplan" onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          <Link to="/user/:userId" onClick={() => handlePageChange('Settings')} className="{currentPage === 'Settings' ? 'nav-link active' : 'nav-link'} text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
             Meal Plan
             </Link>
         </Popover.Group>
@@ -114,8 +114,8 @@ export default function Header({ currentPage, handlePageChange }) {
                 >
                   Sign Up
                   </Link>
-                <Link to="/mealplan"
-                  onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
+                <Link to="/user/:userId"
+                  onClick={() => handlePageChange('Settings')} className="{currentPage === 'Settings' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-300"
                 >
                   Meal Plan
                   </Link>

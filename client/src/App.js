@@ -9,7 +9,7 @@ import Login from './components/pages/Login';
 import Signup from './components/pages/Signup';
 //import Footer from './components/Footer';
 import Profile from './components/pages/Profile';
-import MealPlan from './components/pages/MealPlan';
+import Settings from './components/pages/Settings';
 import About from './components/pages/About';
 import HomePage from './components/pages/HomePage';
 //import './App.css';
@@ -36,7 +36,7 @@ function App() {
 
             <Route path='/user/:userId' element={<Profile />} />
 
-            <Route path='/mealplan' element={<MealPlan />} />
+            <Route path='/user/:userId' element={<MealPlan />} />
 
             <Route path='/about' element={<About />} />
 
