@@ -360,7 +360,7 @@ const Profile = () => {
                           htmlFor="BETTER_BODY"
                           className="ml-3 block text-sm font-medium leading-6 text-gray-900"
                         >
-                          Better Body
+                          Weight Maintenance
                         </label>
                       </div>
                     </div>
