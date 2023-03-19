@@ -6,7 +6,6 @@ const { User, MealPlan } = require('../models');
 const resolvers = {
     Query: {
 
-
         //****YES LET'S TRY THIS */
         // users: async () => {
         //     return User.find();
