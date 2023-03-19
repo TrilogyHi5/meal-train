@@ -57,7 +57,7 @@ function App() {
                 element={<LowCarbDiet />}
               />
               <Route
-                path="/user/:userId"
+                path="/settings"
                 element={<Settings />}
               />
             </Routes>
