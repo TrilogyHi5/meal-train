@@ -1,6 +1,6 @@
-import Ingredients from '../../utils/api/Ingredients';
-import AddUser from '../../utils/api/AddUser';
-import GetUser from '../../utils/api/GetUser';
+import Ingredients from '../utils/api/Ingredients';
+import AddUser from '../utils/api/AddUser';
+import GetUser from '../utils/api/GetUser';
 import Profile from './Profile';
 
 const Settings = () => {    

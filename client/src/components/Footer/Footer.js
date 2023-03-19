@@ -1,10 +1,9 @@
-import React from "react";
-import icon from '../utils/images/icon.png' // import icon image
+import { useState } from 'react';
+import icon from '../../utils/images/icon.png' // import icon image
 
-export function Footer({ currentPage, handlePageChange }) {
+export default function Footer() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-    function Footer() {
         return (
             <footer className="bg-gray-900 text-white py-4">
                 <div className="container mx-auto text-center">
@@ -17,4 +16,3 @@ export function Footer({ currentPage, handlePageChange }) {
             </footer>
         );
     }
-}
