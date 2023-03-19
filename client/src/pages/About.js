@@ -4,7 +4,7 @@ import backgroundImage3 from '../utils/images/background3.jpg'; // import backgr
 import andy from '../utils/images/andy.jpg';
 import jeff from '../utils/images/jeff.jpg';
 import maggie from '../utils/images/Maggie-Matson.png';
-//import fiama from '../utils/images/fiama.JPG';
+import fiama from '../utils/images/fiama.JPG';
 
 const people = [
   {
