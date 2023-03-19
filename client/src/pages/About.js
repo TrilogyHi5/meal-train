@@ -4,6 +4,7 @@ import backgroundImage3 from '../utils/images/background3.jpg'; // import backgr
 import andy from '../utils/images/andy.jpg';
 import jeff from '../utils/images/jeff.jpg';
 import maggie from '../utils/images/Maggie-Matson.png';
+import fiama from '../utils/images/fiama.JPG';
 
 const people = [
   {
@@ -20,8 +21,7 @@ const people = [
   {
     name: 'Fiama Gaitan',
     role: 'Backend Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    imageUrl: fiama
   },
   {
     name: 'Maggie Matson',
