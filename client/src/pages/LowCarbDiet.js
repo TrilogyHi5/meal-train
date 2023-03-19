@@ -11,8 +11,7 @@ function LowCarb() {
                         Low Carb Diet
                     </h1>
                     <p className="text-gray-800 mb-4">
-                        Planul nutrițional Low-Carb este cea mai eficientă legere pentru persoanele care doresc o pierdere rapidă în greutate, vizibilă imediat..
-                    </p>
+                    The Low-Carb nutritional plan is the most effective binding for people who want a rapid weight loss, immediately visible.</p>
                     <Link to="/signup"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Join Today
                     </button></Link>

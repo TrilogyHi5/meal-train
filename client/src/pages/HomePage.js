@@ -54,28 +54,29 @@ function HomePage() {
       </div>
 
       {/* Example Meal Cards */}
-      <div class="flex flex-wrap justify-center">
-        <Link to="/mediterraneandiet">
+      <div class="flex flex-wrap justify-center bg-green-500 py-10 mx-6 rounded-3xl">
+
+        <Link to="/mediterraneandiet" className=" w-full md:w-1/2 lg:w-1/4 rounded-3xl overflow-hidden mx-6 my-2">
           <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${mediterraneanImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
+            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
               <h2 class="text-xl font-bold mb-2 text-green-100">Mediterranean Diet</h2>
             </div>
           </div>
         </Link>
 
 
-        <Link to="/lowcarbdiet">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${lowCarbImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
+        <Link to="/lowcarbdiet" className=" w-full md:w-1/2 lg:w-1/4 rounded-3xl overflow-hidden mx-6 my-2">
+        <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${lowCarbImage})` }}>
+            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
               <h2 class="text-xl font-bold mb-2 text-green-100">Low Carb Diet</h2>
             </div>
           </div>
         </Link>
 
 
-        <Link to="/maintenancediet">
+        <Link to="/maintenancediet" className=" w-full md:w-1/2 lg:w-1/4 rounded-3xl overflow-hidden mx-6 my-2">
           <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${maintenanceImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
+            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
               <h2 class="text-xl font-bold mb-2 text-green-100">Maintenance Diet</h2>
             </div>
           </div>
