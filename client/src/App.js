@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import MediterraneanDiet from './pages/MediterraneanDiet';
 import MaintenanceDiet from './pages/MaintenanceDiet';
 import LowCarbDiet from './pages/LowCarbDiet';
+import MealPlan from './components/MealPlan/MealPlan';
 import Settings from './pages/Settings';
 import About from './pages/About';
 import Header from './components/Header/Header';
@@ -59,6 +60,10 @@ function App() {
               <Route
                 path="/settings"
                 element={<Settings />}
+              />
+              <Route
+                path="/mealplan"
+                element={<MealPlan />}
               />
             </Routes>
           <Footer />
