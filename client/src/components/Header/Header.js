@@ -26,11 +26,14 @@ export default function Header() {
   return (
     <header className="bg-white fixed top-0 left-0 right-0 z-10 border-b-4 border-green-300">
       <nav className="flex items-center justify-between py-4 px-8 bg-green-800 text-white" aria-label="Global">
-        <Link to="/">
-          <img src={icon} className="w-9 h-9 animate-rock" >
-          </img>
-          <div className="flex-1">
-            <p className="flex items-center h-full text-white font-display text-4xl text-center pl-4" >Meal Train</p>
+        
+      <Link to="/">
+          <div className="container mx-auto text-center flex items-center">
+            <img src={icon} className="w-9 h-9 animate-rock" >
+            </img>
+            <div className="flex-1">
+              <p className="flex items-center h-full text-white font-display text-4xl text-center pl-4" >Meal Train</p>
+            </div>
           </div>
         </Link>
 
