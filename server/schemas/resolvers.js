@@ -5,6 +5,9 @@ const { User, MealPlan } = require('../models');
 
 const resolvers = {
     Query: {
+
+
+        //****YES LET'S TRY THIS */
         // users: async () => {
         //     return User.find();
         // },
@@ -21,6 +24,7 @@ const resolvers = {
         //     //throw new AuthenticationError('You need to be logged in!');
 
         // },
+
         // get user food preferences
 
         // get user diet
@@ -36,6 +40,8 @@ const resolvers = {
             //const token = signToken(user);
             return user;
         },
+
+
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
@@ -49,40 +55,39 @@ const resolvers = {
             //     throw new AuthenticationError('Incorrect credentials');
             // }
 
-        //     //const token = signToken(user);
-                return { user };
-        //     //return { token, user };
+            //     //const token = signToken(user);
+            return { user };
+            //     //return { token, user };
         },
 
-        // addUserProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
-        //     const userProps = await User.create({ height, weight, sex, dob, activityLevel });
-
-        //     return userProps;
-        // },
-        // updateUser: async (parent, { firstName, lastName, email, password }) => {
-        //     const updatedUser = await User.findOneAndUpdate({ firstName, lastName, email, password });
-        //     //const token = signToken(updatedUser);
-        //     //return { token, updatedUser };
-        // },
-
-        // updateProps: async (parent, { height, weight, sex, dob, activityLevel }) => {
-        //     const updatedProps = await User.findByIdAndUpdate({ height, weight, sex, dob, activityLevel });
-
-        //     return updatedProps;
-        // },
-
-
-        // post create user meal plan --> built with api?
-
-        //<-------------------------------------NEW CODE------------------------------------------------------------------------------->
-            // Add a third argument to the resolver to access data in our `context`
-        // updateUser: async (parent, { firstName, lastName, email, password }, context) => {
+        // Add a third argument to the resolver to access data in our `context`
+        // addProperties: async (parent, { userId, properties }, context) => {
         //     // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
         //     if (context.user) {
         //         return User.findOneAndUpdate(
-        //             { _id: profileId },
+        //             { _id: userId },
         //             {
-        //                 $addToSet: { meals: MealPlan },
+        //                 $addToSet: { properties: property },
+        //             },
+        //             {
+        //                 new: true,
+        //                 runValidators: true,
+        //             }
+        //         );
+        //     }
+        //     // If user attempts to execute this mutation and isn't logged in, throw an error
+
+        //     throw new AuthenticationError('You need to be logged in!');
+        // },
+        
+
+        // addMeals: async (parent, { userId, meal }, context) => {
+        //     // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
+        //     if (context.user) {
+        //         return User.findByIdAndUpdate(
+        //             { _id: userId },
+        //             {
+        //                 $addToSet: { meals: meal },
         //             },
         //             {
         //                 new: true,
@@ -94,26 +99,65 @@ const resolvers = {
         //     throw new AuthenticationError('You need to be logged in!');
         // },
 
+
+
+
+
         // Set up mutation so a logged in user can only remove their profile and no one else's
-        // removeUser: async (parent, args, context) => {
-        //     if (context.user) {
-        //         return User.findOneAndDelete({ _id: context.user._id });
-        //     }
-        //     throw new AuthenticationError('You need to be logged in!');
-        // },
-        // Make it so a logged in user can only remove a skill from their own profile
-        // removeMealPlan: async (parent, { MealPlan }, context) => {
-        //     if (context.user) {
-        //         return User.findOneAndUpdate(
-        //             { _id: context.user._id },
-        //             { $pull: { meals: MealPlan } },
-        //             { new: true }
-        //         );
-        //     }
-        //     throw new AuthenticationError('You need to be logged in!');
-        // },
-    },
-};
+//         removeUser: async (parent, args, context) => {
+//             if (context.user) {
+//                 return User.findOneAndDelete({ _id: context.user._id });
+//             }
+//             throw new AuthenticationError('You need to be logged in!');
+//         },
+//         // Make it so a logged in user can only remove a property from USER MOdel from their own profile
+//         removeMeals: async (parent, { meal }, context) => {
+//             if (context.user) {
+//                 return User.findOneAndUpdate(
+//                     { _id: context.user._id },
+//                     { $pull: { meals: meal } },
+//                     { new: true }
+//                 );
+//             }
+//             throw new AuthenticationError('You need to be logged in!');
+//         },
+     },
+
+ };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//<-------------------------------------just-in-case- CODE------------------------------------------------------------------------------->
+
+// delete user
+
+// removeUser: async (parent, { userId }) => {
+//     return User.findByIdAndDelete({ _id: userId });
+// },
+
+// updateUser: async (parent, { firstName, lastName, email, password }) => {
+//     const updatedUser = await User.findOneAndUpdate({ firstName, lastName, email, password });
+//     //const token = signToken(updatedUser);
+//     //return { token, updatedUser };
+// },
+
+
+
+
+// post create user meal plan --> built with api?
+
+
 
 // put update user
 

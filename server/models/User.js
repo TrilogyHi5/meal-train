@@ -32,6 +32,9 @@ const userSchema = new Schema({
         // required: true, // disabled for dev
         // minlength: 5 // disabled for dev
     },
+    apiId: {
+        type: String
+    },
     // subdocument
     properties: {
         //do not use requires in order to be able to use these for second form after created user/logged in

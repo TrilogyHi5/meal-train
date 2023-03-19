@@ -5,6 +5,7 @@ import People from '../TeamInfo';
       {
         name: 'Andy Phinney',
         role: 'Content Developer',
+        gitHub: 'https://github.com/aphinney0516',
         imageUrl:
           'client/src/utils/images/andy.jpg',
       },
