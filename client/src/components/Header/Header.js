@@ -50,29 +50,29 @@ export default function Header() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12" >
-          <Link to="/" className="text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
+          <Link to="/" className="text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
             Home
           </Link>
-          <Link to="/about" className="text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
+          <Link to="/about" className="text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
             About
           </Link>
-          <Link to="/signup" className="text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded px-4 py-2">
+          <Link to="/signup" className="text-base font-semibold leading-6 hidden md:block bg-blue-600 hover:bg-blue-800 text-white rounded p-2">
             Sign up
           </Link>
-          <Link to="/login" className="text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2">
+          <Link to="/login" className="text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
             Log in
           </Link>
-          <Link to="/mealplan" className="text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          <Link to="/mealplan" className="text-base font-semibold leading-6 hover:bg-green-900 rounded p-2" >
             Meal Plan
           </Link>
-          <Link to="/settings" className="text-base font-semibold leading-6 hover:bg-green-900 rounded px-4 py-2" >
+          <Link to="/settings" className="text-base font-semibold leading-6 hover:bg-green-900 rounded p-2" >
             Settings
           </Link>
         </Popover.Group>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full border-green-300 border-2 rounded-xl overflow-y-auto max-h-80 bg-top-right top-0 right-0 w-56" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 border-green-300 border-2 rounded-xl overflow-y-auto w-60 h-1/2 bg-top-right top-0 right-0" style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className="flex items-center justify-between">
             {/* <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
