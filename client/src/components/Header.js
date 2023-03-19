@@ -25,7 +25,7 @@ export default function Header({ currentPage, handlePageChange }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white fixed top-0 left-0 right-0 z-10">
+    <header className="bg-white fixed top-0 left-0 right-0 z-10 border-b-4 border-green-300">
       <nav className="flex items-center justify-between py-4 px-8 bg-green-800 text-white" aria-label="Global">
         <Link to="/homepage" onClick={() => handlePageChange('HomePage')} className="{currentPage === 'HomePage' ? 'nav-link active' : 'nav-link'} flex flex-row">
           <img src={icon} className="w-9 h-9 animate-rock" >
@@ -89,8 +89,7 @@ export default function Header({ currentPage, handlePageChange }) {
         </Popover.Group>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto max-h-80 bg-top-right top-0 right-0 w-56"style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full border-green-300 border-2 rounded-xl overflow-y-auto max-h-80 bg-top-right top-0 right-0 w-56"style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className="flex items-center justify-between">
             {/* <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -117,7 +116,7 @@ export default function Header({ currentPage, handlePageChange }) {
 
                 <div>
                   <Link to="/about"
-                    onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300 mx-2">
+                    onClick={() => handlePageChange('About')} className="{currentPage === 'About' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 opacity-70 bg-green-100 my-2 inline-block hover:bg-gray-300 mx-2">
                     About
                   </Link>
                 </div>
@@ -131,14 +130,14 @@ export default function Header({ currentPage, handlePageChange }) {
 
                 <div>
                   <Link to="/signup"
-                    onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block my-2 bg-green-100 hover:bg-gray-300 mx-2">
+                    onClick={() => handlePageChange('Signup')} className="{currentPage === 'Signup' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 opacity-70 inline-block my-2 bg-green-100 hover:bg-gray-300 mx-2">
                     Sign Up
                   </Link>
                 </div>
 
                 <div>
                   <Link to="/mealplan"
-                    onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block bg-green-100 my-2 hover:bg-gray-300 mx-2">
+                    onClick={() => handlePageChange('MealPlan')} className="{currentPage === 'MealPlan' ? 'nav-link active' : 'nav-link'}-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 opacity-70 inline-block bg-green-100 my-2 hover:bg-gray-300 mx-2">
                     Meal Plan
                   </Link>
                 </div>

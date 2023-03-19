@@ -8,7 +8,7 @@ import MediterraneanDiet from './pages/MediterraneanDiet';
 import MaintenanceDiet from './pages/MaintenanceDiet';
 import LowCarbDiet from './pages/LowCarbDiet';
 
-
+// mealplan
 export default function Navigation() {
   const [currentPage, setCurrentPage] = useState('HomePage');
 
@@ -32,7 +32,7 @@ export default function Navigation() {
     if (currentPage === 'LowCarbDiet') {
       return <LowCarbDiet />;
     }
-    return <HomePage/>;
+    return <MediterraneanDiet/>;
     
   };
 

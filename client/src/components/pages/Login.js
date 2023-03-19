@@ -57,8 +57,9 @@ const Login = (props) => {
 
   // export default function Login() {
   return (
-    <div class="bg-cover bg-no-repeat bg-fixed h-screen "
+    <div class="bg-fixed top-0 left-0 w-full h-full bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImage2})` }}>
+
       <div className="isolate py-24 px-6 sm:py-32 lg:px-8">
         {/* <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
@@ -86,13 +87,17 @@ const Login = (props) => {
         </svg>
       </div> */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Login</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            Welcome back!
-          </p>
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mx-3 rounded-xl py-2 px-3 text-base font-semibold text-gray-900 opacity-80 bg-green-100 my-2 inline-block mx-2">Login</h2>
+          </div>
+          <div>
+            <p className="mt-2 text-lg rounded-xl py-2 px-3 text-base font-semibold text-gray-900 opacity-80 bg-green-100 my-2 inline-block mx-2">
+              Welcome back!
+            </p>
+          </div>
         </div>
         {data ? (
-          <p>
+          <p className="mt-2 text-lg rounded-xl py-2 px-3 text-base font-semibold text-gray-900 opacity-70 bg-green-100 my-2 inline-block mx-2">
             Success! You may now head{' '}
             <a h="/">back to the homepage.</a>
           </p>
@@ -101,7 +106,7 @@ const Login = (props) => {
             <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Email
+                  <div className="mt-2 text-lg rounded-xl py-2 px-3 text-base font-semibold text-gray-900 opacity-80 bg-green-100 my-2 inline-block mx-2">Email</div>
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -112,11 +117,12 @@ const Login = (props) => {
                     value={formState.email}
                     className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     onChange={handleChange}
+                    placeholder="Enter email"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="password" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="password" className="mt-2 text-lg rounded-xl py-2 px-3 text-base font-semibold text-gray-900 opacity-80 bg-green-100 my-2 inline-block mx-2">
                   Password
                 </label>
                 <div className="mt-2.5">
@@ -128,15 +134,15 @@ const Login = (props) => {
                     value={formState.password}
                     className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     onChange={handleChange}
+                    placeholder="Enter password"
                   />
                 </div>
               </div>
             </div>
-            <div className="mt-10">
+            <div className="flex justify-center m-10">
               <button
                 type="submit"
-                className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
+                className="bg-blue-500 border-1 border-black rounded-full px-14 py-4 font-bold text-white text-2xl border-green-300 border-2 hover:bg-blue-800">
                 Login
               </button>
             </div>

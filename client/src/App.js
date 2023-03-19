@@ -24,7 +24,7 @@ function App() {
   return (
     <ApolloProvider client={apollo}>
       <Router>
-        <Navigation />
+        <Navigation/>
 
           {/* <Routes>
 
@@ -41,7 +41,7 @@ function App() {
             <Route path='/about' element={<About />} />
 
           </Routes> */}
-        {/* <Footer /> */}
+        {/* <Footer/> */}
       </Router>
     </ApolloProvider>
   );
