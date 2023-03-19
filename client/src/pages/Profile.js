@@ -4,10 +4,10 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 
-import getUser from '../../utils/api/GetUser';
-import ProfileDetail from '../ProfileDetail';
-import UpdateProfileForm from '../UpdateProfileForm';
-import Ingredients from '../../utils/api/Ingredients';
+import getUser from '../utils/api/GetUser';
+// import ProfileDetail from '../ProfileDetail';
+// import UpdateProfileForm from '../UpdateProfileForm';
+import Ingredients from '../utils/api/Ingredients';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

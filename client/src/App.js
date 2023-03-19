@@ -4,16 +4,18 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@ap
 // import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navigation from './components/Navigation';
-import Login from './components/pages/Login';
-import Signup from './components/pages/Signup';
-//import Footer from './components/Footer';
-import Profile from './components/pages/Profile';
-import Settings from './components/pages/Settings';
-import About from './components/pages/About';
-import HomePage from './components/pages/HomePage';
-//import './App.css';
 
+import HomePage from './pages/HomePage';
+import Profile from './pages/Profile';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import MediterraneanDiet from './pages/MediterraneanDiet';
+import MaintenanceDiet from './pages/MaintenanceDiet';
+import LowCarbDiet from './pages/LowCarbDiet';
+import Settings from './pages/Settings';
+import About from './pages/About';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const apollo = new ApolloClient({
   uri: '/graphql',
@@ -24,24 +26,42 @@ function App() {
   return (
     <ApolloProvider client={apollo}>
       <Router>
-        <Navigation/>
-
-          {/* <Routes>
-
-            <Route path='/' element={<HomePage />} />
-
-            <Route path='/login' element={<Login />} />
-
-            <Route path='/signup' element={<Signup />} />
-
-            <Route path='/user/:userId' element={<Profile />} />
-
-            <Route path='/user/:userId' element={<MealPlan />} />
-
-            <Route path='/about' element={<About />} />
-
-          </Routes> */}
-        {/* <Footer/> */}
+          <Header />
+            <Routes>
+              <Route
+                path="/"
+                element={<HomePage />}
+              />
+              <Route
+                path="/about"
+                element={<About />}
+              />
+              <Route
+                path="/login"
+                element={<Login />}
+              />
+              <Route
+                path="/signup"
+                element={<Signup />}
+              />
+              <Route
+                path="/maintenancediet"
+                element={<MaintenanceDiet />}
+              />
+              <Route
+                path="/mediterraneandiet"
+                element={<MediterraneanDiet />}
+              />
+              <Route
+                path="/lowcarbdiet"
+                element={<LowCarbDiet />}
+              />
+              <Route
+                path="/user/:userId"
+                element={<Settings />}
+              />
+            </Routes>
+          <Footer />
       </Router>
     </ApolloProvider>
   );
