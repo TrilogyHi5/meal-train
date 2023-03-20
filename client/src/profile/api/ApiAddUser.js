@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const NewUser = async (query) => {
 
-    // Create a new user.
+    // Create a new user. This is what creates meal plan user ID
 
     // NEW USER ID: ol5z3L3JV0OO4ROrikB18
     // NEW USER ID: Gi9lG9yTEWfDApLoejawo
@@ -19,6 +19,8 @@ export const NewUser = async (query) => {
         },
         'data': query // height, weight, dateOfBirth, sex, activityLevel
     };
+
+    
 
     const response = await axios.request(options);    
     const userInfo = response.data.id;

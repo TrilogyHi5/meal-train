@@ -50,7 +50,7 @@ const typeDefs = gql`
         #addProperties(userId: ID!, height: Int, weight: Int, sex: String, dob: String, activityLevel: String) : User
         #updateUser(firstName: String!, lastName: String!, email: String!, password: String!) : Auth 
         #removeUser(): User
-        addApiId(userId: ID!, apiId: String!) : User
+        addApiId(apiId: String!) : User
     }
 `;
 
