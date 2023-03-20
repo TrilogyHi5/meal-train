@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-async function SetNewDiet(userId, query) {
+export const SetNewDiet = async(userId, query) => {
 
     // Create a new diet for this user. This will overwrite any existing diet.
 
@@ -22,5 +22,3 @@ async function SetNewDiet(userId, query) {
     
     return userInfo;
 };
-
-export default SetNewDiet;

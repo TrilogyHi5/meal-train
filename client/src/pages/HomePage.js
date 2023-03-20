@@ -22,7 +22,7 @@ function HomePage() {
 
       {/* Main content */}
 
-      <<div class="w-full lg:w-1/2 ml-20 mt-10 pt-20">
+      <div class="w-full lg:w-1/2 ml-20 mt-10 pt-20">
           <div className="w-full px-4 py-2 rounded-md">
             <div class="relative bg-gray-200 bg-opacity-70 inline-block rounded-3xl p-4 my-5">
               <h1 className="text-6xl font-bold text-center">Meal Train</h1>

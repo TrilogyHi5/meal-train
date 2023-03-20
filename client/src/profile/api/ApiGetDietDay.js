@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-async function GetDietDay(userId, dayIndex) {  
+export const GetDietDay = async (userId, dayIndex) => { 
     
     // Get the current diet plan for the specified user for a specific day.
     // dayIndex = integer 1-7
@@ -21,5 +21,3 @@ async function GetDietDay(userId, dayIndex) {
 
     return userInfo;
 };
-
-export default GetDietDay;

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-async function NewUser(query) {
+export const NewUser = async (query) => {
 
     // Create a new user.
 
@@ -28,5 +28,3 @@ async function NewUser(query) {
     return userInfo;
 
 };
-
-export default NewUser;

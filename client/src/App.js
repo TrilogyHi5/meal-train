@@ -19,7 +19,7 @@ import Preferences from './components/Preferences/Preferences';
 import Account from './components/Account/Account';
 import MealPlan from './components/MealPlan/MealPlan';
 
-import GetUser from './profile/api/ApiGetUser';
+import { GetUser } from './profile/api/ApiGetUser';
 import User from './profile/User';
 
 
@@ -88,7 +88,7 @@ function App() {
           />
           <Route
             path="/settings"
-            element={<Settings />}
+            element={<Account />}
           />
         </Routes>
         <Footer />

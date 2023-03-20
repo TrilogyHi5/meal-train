@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-async function GetUser() {
+export const GetUser = async () => {
     
     // Retrieve the information of the user with the matching user ID
     // returns id, height, weight, dateOfBirth, sex, activityLevel
@@ -22,5 +22,3 @@ async function GetUser() {
     return userInfo;
 
 };
-
-export default GetUser;

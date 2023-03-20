@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-async function GetFoodSwap(userId, dayIndex, mealType, ingredient) {  
+export const GetFoodSwap = async (userId, dayIndex, mealType, ingredient) => {  
 
     // Retrieve the list of ingredients that can replace another ingredient in an existing diet.
 
@@ -19,7 +19,4 @@ async function GetFoodSwap(userId, dayIndex, mealType, ingredient) {
     console.log(userInfo);
 
     return userInfo;
-
 };
-
-export default GetFoodSwap;
