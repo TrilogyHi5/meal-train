@@ -32,6 +32,11 @@ const typeDefs = gql`
         dinner: [String]
     }
 
+    type Auth {
+      token: ID!
+      user: User
+    }
+
     type Query {
         #users(): [User]
         user(userId: ID!): User
@@ -41,16 +46,16 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addUser(firstName: String, lastName: String, email: String, password: String) : User
-        login(email: String!, password: String!): User
+        addUser(firstName: String!, lastName: String!, email: String!, password: String!) : Auth
+        addApiId(apiId: String!) : User
+        login(email: String!, password: String!): Auth
+        addProperties(userId: ID!, height: Int, weight: Int, sex: String, dob: String, activityLevel: String) : User
         addMeals(userId: ID!, meal: String!): User
         removeUser: User
         removeMeals(meal: String!): User
         #Auth was turn on That's why Apollo Server wouldn't launch ---> login(email: String!, password: String!): Auth
-        #addProperties(userId: ID!, height: Int, weight: Int, sex: String, dob: String, activityLevel: String) : User
         #updateUser(firstName: String!, lastName: String!, email: String!, password: String!) : Auth 
         #removeUser(): User
-        addApiId(apiId: String!) : User
     }
 `;
 

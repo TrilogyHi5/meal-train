@@ -1,25 +1,25 @@
-// import Ingredients from '../utils/api/Ingredients';
-// import AddUser from '../utils/api/AddUser';
-// import GetUser from '../utils/api/GetUser';
-// import Profile from './Profile';
+import React from 'react';
+import AccountSettings from '../profile/AccountSettings'; // name, email, pass
+import ProfileSettings from '../profile/ProfileSettings'; // height...
+import DietSettings from '../profile/DietSettings'; // diet type...
 
-// const Settings = () => {    
+const Settings = () => {    
     
-//         // NEW USER ID: ol5z3L3JV0OO4ROrikB18
-//         // NEW USER ID: Gi9lG9yTEWfDApLoejawo
+        // NEW USER ID: ol5z3L3JV0OO4ROrikB18
+        // NEW USER ID: Gi9lG9yTEWfDApLoejawo
 
-//     const style = { margin: '0 auto', width: '80%' };
+    const style = { margin: '0 auto', width: '80%' };
 
-//     return (
+    return (
 
-//         <div style={style}>  
+        <div style={style}>  
                           
-//             {/* <Ingredients /> */}
-//             {/* <AddUser />  DO NOT TURN ON! CREATES NEW USER ON REFRESH! */} 
-//             <Profile />
+            <AccountSettings />
+            <ProfileSettings />
+            <DietSettings />
 
-//         </div>
-//     )
-// }
+        </div>
+    )
+}
 
-// export default Settings;
+export default Settings;
