@@ -53,7 +53,7 @@ export default function Header() {
 
         <div className="flex lg:flex-1">
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden lg:flex lg:gap-x-12">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
@@ -68,7 +68,7 @@ export default function Header() {
           <> */}
 
 
-        <Popover.Group className="hidden" >
+        <Popover.Group className="hidden lg:flex lg:gap-x-12" >
           <Popover className="relative">
             <Popover.Button className="flex items-center text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
               Profile
