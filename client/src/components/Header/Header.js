@@ -4,7 +4,6 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import icon from '../../utils/images/icon.png' // import icon image
 import 'tailwindcss/tailwind.css'; // import Tailwind CSS
 import './Header.css';
-import backgroundImage from '../../utils/images/background4.jpg'; // import background image
 import {
   Bars3Icon,
   SquaresPlusIcon,
@@ -56,7 +55,7 @@ export default function Header() {
         <div className="flex lg:hidden lg:flex lg:gap-x-12">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -134,7 +133,7 @@ export default function Header() {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 border-green-300 border-2 rounded-xl overflow-y-auto w-80 h-2/3 bg-top-right top-0 right-0" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 border-green-300 border-2 bg-green-700 rounded-b-2xl overflow-y-auto w-60 h-2/3 overflow-x-hidden">
           <div className="flex items-center justify-between">
             <button
               type="button"
@@ -164,6 +163,7 @@ export default function Header() {
                           />
                         </Disclosure.Button>
                         <Disclosure.Panel className="mt-2 space-y-2">
+                       
                           {[...profile].map((item) => (
                             <Disclosure.Button
                               key={item.name}
@@ -172,8 +172,11 @@ export default function Header() {
                               className="ml-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300"
                             >
                               {item.name}
+                              
                             </Disclosure.Button>
+                            
                           ))}
+                        
                         </Disclosure.Panel>
                       </>
                     )}
