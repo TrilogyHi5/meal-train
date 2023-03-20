@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRightIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
 import mediterraneanImage from '../utils/images/maintenance.jpg';
 
@@ -39,17 +39,34 @@ function Maintenance() {
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">
                             What's in it
                         </h2>
-                        <p className="text-gray-800">
+                        <p className="text-gray-800 font-semibold">
                             The nutritional plan may contain the following foods:
                         </p>
-                        <p ArrowRightIcon >Legume</p>
-                        <p ArrowRightIcon >Fruit</p>
-                        <p ArrowRightIcon >Whole grains and bakery products</p>
-                        <p ArrowRightIcon >Meat</p>
-                        <p ArrowRightIcon >Fish</p>
-                        <p ArrowRightIcon >Dairy and vegan alternatives</p>
-                        <p ArrowRightIcon >Oilseeds</p>
-                        <p ArrowRightIcon >Unprocessed natural sweets</p>
+                        
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Legume</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Fruit</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Whole grains and bakery products</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Meat</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Fish</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Dairy and vegan alternatives</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Oilseeds</p>
+                        </div>
+                        <div className="flex">
+                            <ChevronRightIcon className="h-5 w-5 flex-none text-gray-400" /><p>Unprocessed natural sweets</p>
+                        </div>
 
                     </div>
                 </div>

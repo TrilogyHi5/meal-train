@@ -68,7 +68,7 @@ export default function Header() {
           <> */}
 
 
-        <Popover.Group className="hidden lg:flex lg:gap-x-12" >
+        <Popover.Group className="hidden" >
           <Popover className="relative">
             <Popover.Button className="flex items-center text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
               Profile
