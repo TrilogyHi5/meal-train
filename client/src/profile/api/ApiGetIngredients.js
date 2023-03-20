@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export const GetIngredients = async () => {
+async function GetIngredients () {
     
     // Retrieve all the ingredients.
 
@@ -21,3 +21,5 @@ export const GetIngredients = async () => {
     return ingredientsList;
 
 };
+
+export default GetIngredients;

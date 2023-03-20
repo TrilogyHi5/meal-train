@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export const SetFoodSwap = async(userId, dayIndex, mealType, ogIngredient, newIngredient) => {  
+async function SetFoodSwap (userId, dayIndex, mealType, ogIngredient, newIngredient) {  
 
     // Replace an ingredient in an existing diet with another ingredient. 
     // An existing ingredient can be replaced only by a limited set of ingredients. 
@@ -24,3 +24,5 @@ export const SetFoodSwap = async(userId, dayIndex, mealType, ogIngredient, newIn
 
     return userInfo;
 };
+
+export default SetFoodSwap;
