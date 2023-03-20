@@ -33,6 +33,15 @@ export const ADD_MEALS = gql`
   }
 `;
 
+export const ADD_API_ID = gql`
+  mutation addApiId($userId: ID!, $apiId: String!) {
+    addApiId(userId: $userId, apiId: $apiId) {
+      _id
+      apiId
+    }
+  }
+`;
+
 // export const UPDATE_USER = gql`
 //   mutation updateUser($firstName: String, $lastName: String, $email: String, $password: String) {
 //     addUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {

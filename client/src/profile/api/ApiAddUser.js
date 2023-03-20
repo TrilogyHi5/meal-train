@@ -1,21 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 
-// create new user on rapid api
+export const NewUser = async (query) => {
 
-async function NewUser(query) {
-
-    console.log(query);
+    // Create a new user.
 
     // NEW USER ID: ol5z3L3JV0OO4ROrikB18
     // NEW USER ID: Gi9lG9yTEWfDApLoejawo
     // NEW USER ID: tnSf2Br7SdaKwmjiz8oSZ
 
-    let userInfo;    
-
     const options = {
         'method': 'POST',
-        'url': 'https://bespoke-diet-generator.p.rapidapi.com/user',
+        // 'url': 'https://bespoke-diet-generator.p.rapidapi.com/user',
         'headers': {
             'content-type': 'application/json',
             'x-rapidapi-host': 'bespoke-diet-generator.p.rapidapi.com',
@@ -24,17 +20,11 @@ async function NewUser(query) {
         'data': query // height, weight, dateOfBirth, sex, activityLevel
     };
 
-    await axios.request(options)
-        .then(response => {
-            console.log(response.data.id, response);
-            userInfo = response.data.id;
-            console.log(userInfo);
-        })
-        .catch(error => console.error(error));
+    const response = await axios.request(options);    
+    const userInfo = response.data.id;
+    console.log(userInfo);
 
     // send user id to mongodb
     return userInfo;
 
 };
-
-export default NewUser;

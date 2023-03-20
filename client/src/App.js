@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,6 +19,9 @@ import Preferences from './components/Preferences/Preferences';
 import Account from './components/Account/Account';
 import MealPlan from './components/MealPlan/MealPlan';
 
+// import { GetUser } from './profile/api/ApiGetUser';
+// import User from './profile/User';
+
 
 
 const apollo = new ApolloClient({
@@ -27,10 +30,33 @@ const apollo = new ApolloClient({
 });
 
 function App() {
+
+  // let [getApi, setApi] = useState({id: '', height: '', weight: '', dateOfBirth: '', sex: '', activityLevel: ''});
+  // let [getApi, setApi] = useState([]);
+
+
+  // useEffect(() => {
+  //   async function test() {
+  //     const response = await GetUser();   
+  //     //console.log(response); 
+  //     setApi(response);
+  //     }
+  //   test();
+  // }, []);
+
+  // const { id, height, weight, dateOfBirth, sex, activityLevel } = getApi;
+
   return (
     <ApolloProvider client={apollo}>
       <Router>
-        <Header />
+        <Header />        
+          {/* <User 
+            id={id} 
+            height={height} 
+            weight={weight} 
+            dateOfBirth={dateOfBirth} 
+            sex={sex} 
+            activityLevel={activityLevel} /> */}
         <Routes>
           <Route
             path="/"
@@ -61,22 +87,9 @@ function App() {
             element={<LowCarbDiet />}
           />
           <Route
-            path="/mealplan"
-            element={<MealPlan />}
-          />
-          <Route
-            path="/personalinfo"
-            element={<PersonalInfo />}
-          />
-          <Route
-            path="/preferences"
-            element={<Preferences />}
-          />
-          <Route
-            path="/account"
+            path="/settings"
             element={<Account />}
           />
-
         </Routes>
         <Footer />
       </Router>

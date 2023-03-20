@@ -5,33 +5,38 @@ import andy from '../utils/images/andy.jpg';
 import jeff from '../utils/images/jeff.jpg';
 import maggie from '../utils/images/Maggie-Matson.png';
 import fiama from '../utils/images/fiama.JPG';
+import tori from '../utils/images/tori.jpg';
 
 const people = [
   {
     name: 'Andy Phinney',
     role: 'Content Developer',
     imageUrl: andy,
+    link: ''
   },
   {
-    name: 'Aletoria Booker',
+    name: 'Tori Booker',
     role: 'Backend Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    imageUrl: tori,
+    link: 'https://ebonygrrl.github.io/react-portfolio/'
   },
   {
     name: 'Fiama Gaitan',
     role: 'Backend Developer',
-    imageUrl: fiama
+    imageUrl: fiama,
+    link: ''
   },
   {
     name: 'Maggie Matson',
     role: 'Frontend Developer',
-    imageUrl: maggie
+    imageUrl: maggie,
+    link: ''
   },
   {
     name: 'Jeffrey Gilbert',
     role: 'Frontend Developer',
     imageUrl: jeff,
+    link: ''
   },
 ];
 
@@ -41,7 +46,7 @@ export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div class="bg-fixed top-0 left-0 w-full h-full bg-cover bg-no-repeat"
+    <div className="bg-fixed top-0 left-0 w-full h-full bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImage3})` }}>
 <div className="pb-16">
       <div className="relative isolate px-6 pt-2 lg:px-8">
