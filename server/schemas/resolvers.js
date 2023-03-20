@@ -33,22 +33,23 @@ const resolvers = {
 
     Mutation: {
         addUser: async (parent, { firstName, lastName, email, password }) => {
-            console.log(firstName, lastName, "First and last name")
+            console.log(firstName, lastName, email, password, "First and last name")
 
-            if (!firstName || !lastName || !email || !password) {
-                return 'Please provide valid credentials';
-            }
+            // if (!firstName || !lastName || !email || !password) {
+            //     return 'Please provide valid credentials';
+            // }
 
             // Check if there is a user with the same email
-            const foundUser = await User.findOne({ email });
+            // const foundUser = await User.findOne({ email });
 
-            if (foundUser) {
-                return 'Email is already in use';
-            }
+            // if (foundUser) {
+            //     return 'Email is already in use';
+            // }
 
             const user = await User.create({ firstName, lastName, email, password });
             const token = signToken(user);
-            return token;
+            console.log(token);
+            return { token, user };
         },
 
         login: async (parent, { email, password }) => {

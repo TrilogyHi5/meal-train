@@ -1,36 +1,28 @@
 const { Schema, model } = require('mongoose');
-//const emailVal = /[^\s]*@[a-z0-9.-]*/i;
-
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
     firstName: {
         type: String,
-        // required: true, // disabled for dev
-        trim: true,
+        required: true, 
+        //trim: true,
     },
     lastName: {
         type: String,
-        // required: true, // disabled for dev
-        trim: true,
+        required: true, 
+        //trim: true,
     },
     email: {
         type: String,
-        // required: true, // disabled for dev
+        required: true, 
         unique: true,
         //in MongoDB we can use match as the validator, 1 step stopshop
-        //match: [/.+@.+\..+/, 'Must match an email address!'],
-        // validate: { // disabled for dev
-        //     validator: (input) => {
-        //       return emailVal.test(input); 
-        //     },
-        //     message: 'Please use a valid email address.'
-        // }
+        match: [/.+@.+\..+/, 'Please use a valid email address!'],
     },
     password: {
         type: String,
-        // required: true, // disabled for dev
-        // minlength: 5 // disabled for dev
+        required: true, 
+        minlength: 5 
     },
     apiId: {
         type: String
@@ -67,17 +59,10 @@ const userSchema = new Schema({
         // not sure about these
         // preferences: {
         //     type: String
-        // },
-        // allergies: {
-        //     type: String
-        // },    
+        // },   
         preferences: {
             // push food ids from api into array
             ingredients: [{ 
-                type: Schema.Types.ObjectId
-            }], 
-            // push food ids from api into array
-            allergies: [{ 
                 type: Schema.Types.ObjectId
             }]
         },
