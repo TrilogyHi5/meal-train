@@ -1,0 +1,17 @@
+/* CSS to rock the header icon*/
+
+.icon {
+    animation: rock 2s infinite;
+  }
+  
+  @keyframes rock {
+    0% {
+      transform: rotateZ(-10deg);
+    }
+    50% {
+      transform: rotateZ(10deg);
+    }
+    100% {
+      transform: rotateZ(-10deg);
+    }
+  }

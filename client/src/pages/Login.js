@@ -59,7 +59,7 @@ const Login = (props) => {
   return (
     <div className="bg-cover bg-no-repeat bg-fixed h-screen "
       style={{ backgroundImage: `url(${backgroundImage2})` }}>
-      <div className="isolate py-24 px-6 sm:py-32 lg:px-8 bg-white mx-40 rounded-3xl bg-opacity-70">
+      <div className="px-6 py-6 mx-6 my-16 sm:mx-10 lg:px-8 bg-white lg:mx-40 rounded-3xl bg-opacity-70">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Login</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">

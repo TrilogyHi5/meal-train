@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import icon from '../../utils/images/icon.png' // import icon image
 import 'tailwindcss/tailwind.css'; // import Tailwind CSS
+import './Header.css';
 import backgroundImage from '../../utils/images/background4.jpg'; // import background image
 import {
   Bars3Icon,
@@ -42,7 +43,7 @@ export default function Header() {
 
         <Link to="/">
           <div className="container mx-auto text-center flex items-center">
-            <img src={icon} className="w-9 h-9 animate-rock" >
+            <img src={icon} className="w-9 h-9 icon" >
             </img>
             <div className="flex-1">
               <p className="flex items-center h-full text-white font-display text-4xl text-center pl-4" >Meal Train</p>
