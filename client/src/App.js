@@ -19,8 +19,8 @@ import Preferences from './components/Preferences/Preferences';
 import Account from './components/Account/Account';
 import MealPlan from './components/MealPlan/MealPlan';
 
-import { GetUser } from './profile/api/ApiGetUser';
-import User from './profile/User';
+// import { GetUser } from './profile/api/ApiGetUser';
+// import User from './profile/User';
 
 
 
@@ -32,31 +32,31 @@ const apollo = new ApolloClient({
 function App() {
 
   // let [getApi, setApi] = useState({id: '', height: '', weight: '', dateOfBirth: '', sex: '', activityLevel: ''});
-  let [getApi, setApi] = useState([]);
+  // let [getApi, setApi] = useState([]);
 
 
-  useEffect(() => {
-    async function test() {
-      const response = await GetUser();   
-      //console.log(response); 
-      setApi(response);
-      }
-    test();
-  }, []);
+  // useEffect(() => {
+  //   async function test() {
+  //     const response = await GetUser();   
+  //     //console.log(response); 
+  //     setApi(response);
+  //     }
+  //   test();
+  // }, []);
 
-  const { id, height, weight, dateOfBirth, sex, activityLevel } = getApi;
+  // const { id, height, weight, dateOfBirth, sex, activityLevel } = getApi;
 
   return (
     <ApolloProvider client={apollo}>
       <Router>
         <Header />        
-          <User 
+          {/* <User 
             id={id} 
             height={height} 
             weight={weight} 
             dateOfBirth={dateOfBirth} 
             sex={sex} 
-            activityLevel={activityLevel} />
+            activityLevel={activityLevel} /> */}
         <Routes>
           <Route
             path="/"
