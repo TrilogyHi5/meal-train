@@ -6,16 +6,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 import HomePage from './pages/HomePage';
-import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import MediterraneanDiet from './pages/MediterraneanDiet';
 import MaintenanceDiet from './pages/MaintenanceDiet';
 import LowCarbDiet from './pages/LowCarbDiet';
-import Settings from './pages/Settings';
 import About from './pages/About';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import PersonalInfo from './components/PersonalInfo/PersonalInfo';
+import Preferences from './components/Preferences/Preferences';
+import Account from './components/Account/Account';
+import MealPlan from './components/MealPlan/MealPlan';
 
 import GetUser from './profile/api/ApiGetUser';
 import User from './profile/User';
