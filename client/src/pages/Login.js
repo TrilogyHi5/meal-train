@@ -57,7 +57,7 @@ const Login = (props) => {
 
   // export default function Login() {
   return (
-    <div class="bg-cover bg-no-repeat bg-fixed h-screen "
+    <div className="bg-cover bg-no-repeat bg-fixed h-screen "
       style={{ backgroundImage: `url(${backgroundImage2})` }}>
       <div className="isolate py-24 px-6 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

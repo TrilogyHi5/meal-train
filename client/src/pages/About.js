@@ -41,7 +41,7 @@ export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div class="bg-fixed top-0 left-0 w-full h-full bg-cover bg-no-repeat"
+    <div className="bg-fixed top-0 left-0 w-full h-full bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImage3})` }}>
 
       <div className="relative isolate px-6 pt-2 lg:px-8">

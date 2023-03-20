@@ -18,17 +18,17 @@ function HomePage() {
   };
 
   return (
-    <div class="bg-fixed bg-bottom top-0 left-0 w-full h-full bg-cover bg-no-repeat"
+    <div className="bg-fixed bg-bottom top-0 left-0 w-full h-full bg-cover bg-no-repeat"
     style={{ backgroundImage: `url(${backgroundImage})` }}>
 
       {/* Main content */}
       <div className="flex-1 flex items-center justify-center ">
         <div className="text-center my-5 mt-24">
-        <div class="relative bg-gray-200 bg-opacity-70 rounded-3xl p-8 mx-20 my-5">
+        <div className="relative bg-gray-200 bg-opacity-70 rounded-3xl p-8 mx-20 my-5">
             <h1 className="text-4xl font-bold ">Meal Train - Train yourself to diet differently</h1>
           </div>
 
-          <div class="relative bg-gray-200 bg-opacity-70 rounded-3xl p-8 mx-20 my-5">
+          <div className="relative bg-gray-200 bg-opacity-70 rounded-3xl p-8 mx-20 my-5">
             <p className="text-lg mb-8">Are you frustrated with fad diets and ready to try something different?
               Then it is time to train yourself to diet differently, with Meal Train!
               Meal Train takes all of the leg work out of dieting and gives you complete daily meal plans
@@ -54,29 +54,29 @@ function HomePage() {
       </div>
 
       {/* Example Meal Cards */}
-      <div class="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center">
         <Link to="/mediterraneandiet">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${mediterraneanImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
-              <h2 class="text-xl font-bold mb-2 text-green-100">Mediterranean Diet</h2>
+          <div className="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${mediterraneanImage})` }}>
+            <div className="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
+              <h2 className="text-xl font-bold mb-2 text-green-100">Mediterranean Diet</h2>
             </div>
           </div>
         </Link>
 
 
         <Link to="/lowcarbdiet">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${lowCarbImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
-              <h2 class="text-xl font-bold mb-2 text-green-100">Low Carb Diet</h2>
+          <div className="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${lowCarbImage})` }}>
+            <div className="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
+              <h2 className="text-xl font-bold mb-2 text-green-100">Low Carb Diet</h2>
             </div>
           </div>
         </Link>
 
 
         <Link to="/maintenancediet">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${maintenanceImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
-              <h2 class="text-xl font-bold mb-2 text-green-100">Maintenance Diet</h2>
+          <div className="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${maintenanceImage})` }}>
+            <div className="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block ml-4 my-4">
+              <h2 className="text-xl font-bold mb-2 text-green-100">Maintenance Diet</h2>
             </div>
           </div>
         </Link>
@@ -85,7 +85,7 @@ function HomePage() {
 
       {/* Here's Why */}
       <div className="flex justify-center m-10">
-      <div class="bg-green-500 opacity-70 rounded-3xl text-green-100 font-bold p-4 inline-block text-3xl">Here's Why to choose Meal Train</div>
+      <div className="bg-green-500 opacity-70 rounded-3xl text-green-100 font-bold p-4 inline-block text-3xl">Here's Why to choose Meal Train</div>
       </div>
       <div className="flex flex-col lg:flex-row mx-auto max-w-4xl px-4 my-8">
       <div className="flex-1 mr-6 rounded-3xl bg-green-100 opacity-80 px-2">
@@ -145,7 +145,7 @@ function HomePage() {
         <div className="flex flex-wrap -mx-4 py-4 mx-2">
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-            <div class="font-bold text-2xl mb-2">
+            <div className="font-bold text-2xl mb-2">
                 <h2>Personalized nutritional plans</h2>
               </div>
               <div>
@@ -158,7 +158,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-            <div class="font-bold text-2xl mb-2">
+            <div className="font-bold text-2xl mb-2">
                 <h2>Support via WhatsApp</h2>
               </div>
               <div>
@@ -169,7 +169,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-            <div class="font-bold text-2xl mb-2">
+            <div className="font-bold text-2xl mb-2">
                 <h2>We create a caloric deficit that is easy to maintain over time</h2>
               </div>
               <div>
@@ -181,7 +181,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-            <div class="font-bold text-2xl mb-2">
+            <div className="font-bold text-2xl mb-2">
                 <h2>Food Diary</h2>
               </div>
               <div>
@@ -194,7 +194,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-            <div class="font-bold text-2xl mb-2">
+            <div className="font-bold text-2xl mb-2">
                 <h2>Exercises for home</h2>
               </div>
               <div>
@@ -206,7 +206,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-            <div class="font-bold text-2xl mb-2">
+            <div className="font-bold text-2xl mb-2">
                 <h2>Food</h2>
               </div>
               <div>

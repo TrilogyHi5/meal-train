@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Mediterranean() {
     return (
-        <div class="bg-cover bg-no-repeat bg-fixed h-screen"
+        <div className="bg-cover bg-no-repeat bg-fixed h-screen"
         style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="bg-cover bg-center h-screen flex flex-col">
             <div className="flex-grow flex flex-col justify-center items-center">
