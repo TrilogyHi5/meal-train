@@ -1,10 +1,13 @@
+import React from 'react';
 import axios from 'axios';
 
-async function getUserDiet(props) {  
+async function GetFoodDislikes(userId) {
+
+    // Retrieve the list of all ingredients that will be excluded from user's diets.
 
     const options = {
         'method': 'GET',
-        // 'url': `https://bespoke-diet-generator.p.rapidapi.com/user/tnSf2Br7SdaKwmjiz8oSZ`,
+        // 'url': `https://bespoke-diet-generator.p.rapidapi.com/user/${userId}/ingredients/excluded`,
         'headers': {
             'x-rapidapi-host': 'bespoke-diet-generator.p.rapidapi.com',
             'x-rapidapi-key': process.env.REACT_APP_API_KEY
@@ -18,4 +21,4 @@ async function getUserDiet(props) {
     return userInfo;
 };
 
-export default getUserDiet;
+export default GetFoodDislikes;

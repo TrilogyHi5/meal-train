@@ -1,14 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 
-async function GetUser() {
+async function GetDietDay(userId, dayIndex) {  
     
-    // Retrieve the information of the user with the matching user ID
-    // returns id, height, weight, dateOfBirth, sex, activityLevel
+    // Get the current diet plan for the specified user for a specific day.
+    // dayIndex = integer 1-7
 
     const options = {
         'method': 'GET',
-        // 'url': `https://bespoke-diet-generator.p.rapidapi.com/user/tnSf2Br7SdaKwmjiz8oSZ`,
+        // 'url': `https://bespoke-diet-generator.p.rapidapi.com/user/${userId}/diet/${dayIndex}`,
         'headers': {
             'x-rapidapi-host': 'bespoke-diet-generator.p.rapidapi.com',
             'x-rapidapi-key': process.env.REACT_APP_API_KEY
@@ -20,7 +20,6 @@ async function GetUser() {
     console.log(userInfo);
 
     return userInfo;
-
 };
 
-export default GetUser;
+export default GetDietDay;

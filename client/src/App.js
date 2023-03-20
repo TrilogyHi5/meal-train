@@ -44,23 +44,17 @@ function App() {
 
   const { id, height, weight, dateOfBirth, sex, activityLevel } = getApi;
 
-  const apiUserId = id;
-
   return (
     <ApolloProvider client={apollo}>
       <Router>
-        <Header />
-        <p>{apiUserId}</p>
-        {/* <p>{getApi}</p>
-        <p>{getApi && getApi.map((item, idx) => {
-          return <User 
-            id={idx} 
-            height={item.height} 
-            weight={item.weight} 
-            dateOfBirth={item.dateOfBirth} 
-            sex={item.sex} 
-            activityLevel={item.activityLevel} />;         
-        })}</p> */}
+        <Header />        
+          <User 
+            id={id} 
+            height={height} 
+            weight={weight} 
+            dateOfBirth={dateOfBirth} 
+            sex={sex} 
+            activityLevel={activityLevel} />
         <Routes>
           <Route
             path="/"

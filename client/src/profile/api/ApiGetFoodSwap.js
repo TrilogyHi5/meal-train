@@ -1,14 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
-async function GetUser() {
-    
-    // Retrieve the information of the user with the matching user ID
-    // returns id, height, weight, dateOfBirth, sex, activityLevel
+async function GetFoodSwap(userId, dayIndex, mealType, ingredient) {  
+
+    // Retrieve the list of ingredients that can replace another ingredient in an existing diet.
 
     const options = {
         'method': 'GET',
-        // 'url': `https://bespoke-diet-generator.p.rapidapi.com/user/tnSf2Br7SdaKwmjiz8oSZ`,
+        // 'url': `https://bespoke-diet-generator.p.rapidapi.com/user/${userId}/diet/${dayIndex}/${mealType}/${ingredient}/replace`,
         'headers': {
             'x-rapidapi-host': 'bespoke-diet-generator.p.rapidapi.com',
             'x-rapidapi-key': process.env.REACT_APP_API_KEY
@@ -23,4 +22,4 @@ async function GetUser() {
 
 };
 
-export default GetUser;
+export default GetFoodSwap;
