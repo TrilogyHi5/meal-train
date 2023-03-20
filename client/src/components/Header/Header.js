@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import icon from '../../utils/images/icon.png' // import icon image
 import 'tailwindcss/tailwind.css'; // import Tailwind CSS
+import './Header.css';
 import backgroundImage from '../../utils/images/background4.jpg'; // import background image
 import {
   Bars3Icon,
@@ -43,7 +44,7 @@ export default function Header() {
 
         <Link to="/">
           <div className="container mx-auto text-center flex items-center">
-            <img src={icon} className="w-9 h-9 animate-rock" >
+            <img src={icon} className="w-9 h-9 icon" >
             </img>
             <div className="flex-1">
               <p className="flex items-center h-full text-white font-display text-4xl text-center pl-4" >Meal Train</p>
@@ -68,7 +69,7 @@ export default function Header() {
           <> */}
 
 
-        <Popover.Group className="hidden lg:flex lg:gap-x-12" >
+        <Popover.Group className="hidden" >
           <Popover className="relative">
             <Popover.Button className="flex items-center text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
               Profile
@@ -134,7 +135,7 @@ export default function Header() {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 border-green-300 border-2 rounded-xl overflow-y-auto w-60 h-1/2 bg-top-right top-0 right-0" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 border-green-300 border-2 rounded-xl overflow-y-auto w-80 h-2/3 bg-top-right top-0 right-0" style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className="flex items-center justify-between">
             <button
               type="button"
@@ -153,10 +154,10 @@ export default function Header() {
                   {/* {Auth.loggedIn() ? (
           <> */}
 
-                  <Disclosure as="div" className="-mx-3">
+                  <Disclosure as="div" className="-mx-3 pl-3 pb-3">
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="flex items-center mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300 mx-2">
+                        <Disclosure.Button className="flex items-center mx-3 inline-block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 hover:bg-gray-300">
                           Profile
                           <ChevronDownIcon
                             className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
@@ -169,7 +170,7 @@ export default function Header() {
                               key={item.name}
                               as="a"
                               href={item.href}
-                              className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block bg-green-100 my-2 hover:bg-gray-300 mx-2"
+                              className="ml-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300"
                             >
                               {item.name}
                             </Disclosure.Button>
@@ -187,19 +188,19 @@ export default function Header() {
           <> */}
 
                   <div>
-                    <Link to="/about" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300 mx-2">
+                    <Link to="/about" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300">
                       About
                     </Link>
                   </div>
 
                   <div>
-                    <Link to="/login" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-green-100 inline-block my-2 bg-blue-500 hover:bg-gray-300 mx-2">
+                    <Link to="/login" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-green-100 inline-block my-2 bg-blue-500 hover:bg-gray-300">
                       Login
                     </Link>
                   </div>
 
                   <div>
-                    <Link to="/signup" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block my-2 bg-green-100 hover:bg-gray-300 mx-2">
+                    <Link to="/signup" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 inline-block my-2 bg-green-100 hover:bg-gray-300">
                       Sign Up
                     </Link>
                   </div>
