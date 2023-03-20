@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export const GetDiet = async (userId) => {  
+async function GetDiet (userId) {  
 
     // Return the diet configuration and the diet plan for each day.
 

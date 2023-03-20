@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export const NewUser = async (query) => {
+async function NewUser (query) {
 
     // Create a new user. This is what creates meal plan user ID
 
@@ -30,3 +30,5 @@ export const NewUser = async (query) => {
     return userInfo;
 
 };
+
+export default NewUser;

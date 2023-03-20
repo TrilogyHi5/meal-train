@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import AddUserInfo from './forms/AddUserInfo';
 import NewUser from './api/ApiAddUser';
-import { convertWeightToImperial, convertHeightToImperial } from '../../utils/utils';
+import { convertWeightToImperial, convertHeightToImperial } from '../utils/utils';
 import { ADD_API_ID } from '../utils/mutations';
 
 const ProfileSettings = () => {
@@ -57,7 +57,7 @@ const ProfileSettings = () => {
         // GET THE MONGO ID TO SEND THE API ID
 
         try {
-            const data = useMutation(addApiId, {
+            const data = addApiId(userId, {
                 variables: {apiId: userId}
             })
             console.log('string', data);
