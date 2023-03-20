@@ -34,9 +34,8 @@ export const ADD_MEALS = gql`
 `;
 
 export const ADD_API_ID = gql`
-  mutation addApiId($userId: ID!, $apiId: String!) {
-    addApiId(userId: $userId, apiId: $apiId) {
-      _id
+  mutation addApiId($apiId: String!) {
+    addApiId(apiId: $apiId) {
       apiId
     }
   }

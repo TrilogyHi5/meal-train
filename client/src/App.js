@@ -18,6 +18,7 @@ import PersonalInfo from './components/PersonalInfo/PersonalInfo';
 import Preferences from './components/Preferences/Preferences';
 import Account from './components/Account/Account';
 import MealPlan from './components/MealPlan/MealPlan';
+import ProfileSettings from './profile/ProfileSettings';
 
 // import { GetUser } from './profile/api/ApiGetUser';
 // import User from './profile/User';
@@ -75,15 +76,15 @@ function App() {
             element={<Signup />}
           />
           <Route
-            path="/maintenancediet"
+            path="/plans/maintenance-diet"
             element={<MaintenanceDiet />}
           />
           <Route
-            path="/mediterraneandiet"
+            path="/plans/mediterranean-diet"
             element={<MediterraneanDiet />}
           />
           <Route
-            path="/lowcarbdiet"
+            path="/plans/lowcarb-diet"
             element={<LowCarbDiet />}
           />
           <Route

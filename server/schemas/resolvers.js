@@ -16,13 +16,13 @@ const resolvers = {
         //     return User.findOne({ _id: userId });
         // },
         // // By adding context to our query, we can retrieve the logged in user without specifically searching for them
-        // me: async (parent, args, context) => {
-        //     if (context.user) {
-        //         return User.findOne({ _id: context.user._id });
-        //     }
-        //     //throw new AuthenticationError('You need to be logged in!');
+        me: async (parent, args, context) => {
+            if (context.user) {
+                return User.findOne({ _id: context.user._id });
+            }
+            //throw new AuthenticationError('You need to be logged in!');
 
-        // },
+        },
 
         // get user food preferences
 
@@ -59,8 +59,8 @@ const resolvers = {
             //     //return { token, user };
         },
 
-        addApiId: async (parent, { id, apiId}) => {
-            const user = await User.findByIdAndUpdate({id, apiId});
+        addApiId: async (parent, { apiId }, context) => {
+            const user = await User.findByIdAndUpdate(context.user._id, {apiId});
             return user;
         },
 
