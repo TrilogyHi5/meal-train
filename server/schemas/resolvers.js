@@ -60,6 +60,11 @@ const resolvers = {
             //     //return { token, user };
         },
 
+        addApiId: async (parent, { id, apiId}) => {
+            const user = await User.findByIdAndUpdate({id, apiId});
+            return user;
+        },
+
         // Add a third argument to the resolver to access data in our `context`
         // addProperties: async (parent, { userId, properties }, context) => {
         //     // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
