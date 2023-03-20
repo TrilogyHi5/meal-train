@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import backgroundImage2 from '../utils/images/background2.jpg'; // import background image
+
 // import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -39,7 +41,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="isolate bg-white py-24 px-6 sm:py-32 lg:px-8">
+    <div className="bg-cover bg-no-repeat bg-fixed h-screen "
+    style={{ backgroundImage: `url(${backgroundImage2})` }}>
+    <div className="isolate py-24 px-6 sm:py-32 lg:px-8 bg-white mx-40 rounded-3xl bg-opacity-70">
 
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sign Up</h2>
@@ -136,6 +140,7 @@ const Signup = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   )
 }

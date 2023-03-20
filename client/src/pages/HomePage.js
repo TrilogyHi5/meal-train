@@ -17,19 +17,19 @@ function HomePage() {
   };
 
   return (
-    <div class="bg-fixed bg-bottom top-0 left-0 w-full h-full bg-cover bg-no-repeat"
+    <div className="bg-fixed bg-bottom top-0 left-0 w-full h-full bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImage})` }}>
 
       {/* Main content */}
 
-      <div class="w-full lg:w-1/2 ml-20 mt-10 pt-20">
+      <div className="w-full lg:w-1/2 ml-20 mt-10 pt-20">
           <div className="w-full px-4 py-2 rounded-md">
-            <div class="relative bg-gray-200 bg-opacity-70 inline-block rounded-3xl p-4 my-5">
+            <div className="relative bg-gray-200 bg-opacity-70 inline-block rounded-3xl p-4 my-5">
               <h1 className="text-6xl font-bold text-center">Meal Train</h1>
             </div>
 
 
-            <div class="relative bg-gray-200 bg-opacity-70 rounded-3xl p-8 my-5">
+            <div className="relative bg-gray-200 bg-opacity-70 rounded-3xl p-8 my-5">
             <div>
             <h1 className="text-4xl font-bold pb-4">Train yourself to diet differently</h1>
             </div>
@@ -51,30 +51,30 @@ function HomePage() {
       </div>
 
       {/* Example Meal Cards */}
-      <div class="flex flex-wrap justify-center bg-green-500 py-10 mx-6 rounded-3xl">
+      <div className="flex flex-wrap justify-center bg-green-500 py-10 mx-6 rounded-3xl">
 
         <Link to="/mediterraneandiet" className=" w-full md:w-1/2 lg:w-1/4 rounded-3xl overflow-hidden mx-6 my-2">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${mediterraneanImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
-              <h2 class="text-xl font-bold mb-2 text-green-100">Mediterranean Diet</h2>
+          <div className="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${mediterraneanImage})` }}>
+            <div className="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
+              <h2 className="text-xl font-bold mb-2 text-green-100">Mediterranean Diet</h2>
             </div>
           </div>
         </Link>
 
 
         <Link to="/lowcarbdiet" className=" w-full md:w-1/2 lg:w-1/4 rounded-3xl overflow-hidden mx-6 my-2">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${lowCarbImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
-              <h2 class="text-xl font-bold mb-2 text-green-100">Low Carb Diet</h2>
+          <div className="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${lowCarbImage})` }}>
+            <div className="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
+              <h2 className="text-xl font-bold mb-2 text-green-100">Low Carb Diet</h2>
             </div>
           </div>
         </Link>
 
 
         <Link to="/maintenancediet" className=" w-full md:w-1/2 lg:w-1/4 rounded-3xl overflow-hidden mx-6 my-2">
-          <div class="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${maintenanceImage})` }}>
-            <div class="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
-              <h2 class="text-xl font-bold mb-2 text-green-100">Maintenance Diet</h2>
+          <div className="bg-cover bg-center h-40 md:h-64" style={{ backgroundImage: `url(${maintenanceImage})` }}>
+            <div className="bg-green-800 bg-opacity-60 p-4 rounded-xl inline-block m-4">
+              <h2 className="text-xl font-bold mb-2 text-green-100">Maintenance Diet</h2>
             </div>
           </div>
         </Link>
@@ -83,7 +83,7 @@ function HomePage() {
 
       {/* Here's Why */}
       <div className="flex justify-center mt-40">
-        <div class="bg-green-500 rounded-3xl text-green-100 font-bold p-4 inline-block text-3xl">Here's Why to choose Meal Train</div>
+        <div className="bg-green-500 rounded-3xl text-green-100 font-bold p-4 inline-block text-3xl">Here's Why to choose Meal Train</div>
       </div>
 
       <div className="flex flex-col lg:flex-row mx-auto max-w-4xl px-2 my-8">
@@ -144,7 +144,7 @@ function HomePage() {
         <div className="flex flex-wrap -mx-4 py-4 mx-2">
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-              <div class="font-bold text-2xl mb-2">
+              <div className="font-bold text-2xl mb-2">
                 <h2>Personalized nutritional plans</h2>
               </div>
               <div>
@@ -157,7 +157,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-              <div class="font-bold text-2xl mb-2">
+              <div className="font-bold text-2xl mb-2">
                 <h2>Support via WhatsApp</h2>
               </div>
               <div>
@@ -168,7 +168,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-              <div class="font-bold text-2xl mb-2">
+              <div className="font-bold text-2xl mb-2">
                 <h2>We create a caloric deficit that is easy to maintain over time</h2>
               </div>
               <div>
@@ -180,7 +180,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-              <div class="font-bold text-2xl mb-2">
+              <div className="font-bold text-2xl mb-2">
                 <h2>Food Diary</h2>
               </div>
               <div>
@@ -193,7 +193,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-              <div class="font-bold text-2xl mb-2">
+              <div className="font-bold text-2xl mb-2">
                 <h2>Exercises for home</h2>
               </div>
               <div>
@@ -205,7 +205,7 @@ function HomePage() {
 
           <div className="w-full md:w-1/3 px-4 mb-4 md:mb-0 my-2">
             <div className="bg-white bg-opacity-70 rounded-2xl p-4">
-              <div class="font-bold text-2xl mb-2">
+              <div className="font-bold text-2xl mb-2">
                 <h2>Food</h2>
               </div>
               <div>

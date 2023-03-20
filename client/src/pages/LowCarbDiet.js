@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRightIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import lowCarbImage from '../utils/images/lowCarb.webp'; // import background image
 
 import { Link } from 'react-router-dom';
@@ -41,13 +41,13 @@ function LowCarb() {
                         <p className="text-gray-800">
                             The nutritional plan may contain the following foods:
                         </p>
-                        <p ArrowRightIcon >Green vegetables</p>
-                        <p ArrowRightIcon >Few berries</p>
-                        <p ArrowRightIcon >Higher amounts of meat</p>
-                        <p ArrowRightIcon >Fish</p>
-                        <p ArrowRightIcon >Eggs</p>
-                        <p ArrowRightIcon >Few dairy and vegan alternatives</p>
-                        <p ArrowRightIcon >Oilseeds</p>
+                        <p ChevronRightIcon >Green vegetables</p>
+                        <p ChevronRightIcon >Few berries</p>
+                        <p ChevronRightIcon >Higher amounts of meat</p>
+                        <p ChevronRightIcon >Fish</p>
+                        <p ChevronRightIcon >Eggs</p>
+                        <p ChevronRightIcon >Few dairy and vegan alternatives</p>
+                        <p ChevronRightIcon >Oilseeds</p>
                     </div>
                 </div>
             </div>
