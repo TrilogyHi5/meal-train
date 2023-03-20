@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import UpdateUserName from './forms/UpdateUserName';
 import { validateEmail, validateName } from '../../utils/utils';
 
-const Settings = () => {
+const AccountSettings = () => {
 
     let [userName, setUserName] = useState({ firstName: '', lastName: '', email: '', password: '' });
 
@@ -41,4 +41,4 @@ const Settings = () => {
     );
 };
 
-export default Settings;
+export default AccountSettings;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-//import Auth from '../../utils/auth';
+import Auth from '../utils/auth';
 import backgroundImage2 from '../utils/images/background2.jpg'; // import background image
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
 // import { Switch } from '@headlessui/react'
@@ -37,22 +37,17 @@ const Login = (props) => {
         variables: { ...formState },
       });
 
-      //   Auth.login(data.login.token);
-      // } catch (e) {
-      //   console.error(e);
-      // }
-
-    }
-    catch (e) {
-      console.error(e);
-    }
+      Auth.login(data.login.token);
+      } catch (e) {
+        console.error(e);
+      }
+    
     // clear form values
     setFormState({
       email: '',
       password: '',
 
     });
-
   };
 
   // export default function Login() {

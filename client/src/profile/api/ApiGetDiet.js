@@ -20,3 +20,5 @@ async function GetDiet (userId) {
 
     return userInfo;
 };
+
+export default GetDiet;

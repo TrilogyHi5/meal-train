@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export const SetFoodDislikes = async (userId, query) => {
+async function SetFoodDislikes (userId, query) {
 
     // Set the ingredients that the user DOES NOT want in this diet. This request will overwrite any existing preference.
     // If a diet already exists when this call is performed, it's better to regenerate the diet in order to take into account the new changes.
@@ -23,3 +23,5 @@ export const SetFoodDislikes = async (userId, query) => {
     
     return userInfo;
 };
+
+export default SetFoodDislikes;

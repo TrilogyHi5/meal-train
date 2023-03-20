@@ -53,18 +53,18 @@ export const ADD_API_ID = gql`
 //   }
 // `;
 
-// export const ADD_PROPERTIES = gql`
-//   mutation addProfile($height: String, $weight: String, $sex: String, $dob: String, $activityLevel: String ) {
-//     addProfile(height: $height, weight: $weight, sex: $sex, dob: $dob, activityLevel: $activityLevel) {
-//         _id
-//         height
-//         weight
-//         sex
-//         dob
-//         activityLevel
-//     }
-//   }
-// `;
+export const ADD_PROPERTIES = gql`
+  mutation addProfile($height: String, $weight: String, $sex: String, $dob: String, $activityLevel: String ) {
+    addProfile(height: $height, weight: $weight, sex: $sex, dob: $dob, activityLevel: $activityLevel) {
+        _id
+        height
+        weight
+        sex
+        dob
+        activityLevel
+    }
+  }
+`;
 
 
 export const REMOVE_USER = gql`

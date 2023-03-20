@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export const UpdateCurrentUser = async(userId, query) => {
+async function UpdateCurrentUser (userId, query) {
 
     // Update the user's information that changes over time such as weight and activity level.
 
@@ -22,3 +22,5 @@ export const UpdateCurrentUser = async(userId, query) => {
     
     return userInfo;
 };
+
+export default UpdateCurrentUser;
