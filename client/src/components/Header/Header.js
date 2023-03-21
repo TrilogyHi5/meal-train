@@ -13,7 +13,7 @@ import { HiOutlineUser, HiOutlineLockClosed, HiOutlineAdjustments } from "react-
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 
-// import Auth from '../../utils/auth';
+import Auth from '../../utils/auth';
 
 
 const profile = [
@@ -30,10 +30,10 @@ function classNames(...classes) {
 
 export default function Header() {
 
-  // const logout = (event) => {
-  //   event.preventDefault();
-  //   Auth.logout();
-  // };
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -64,8 +64,8 @@ export default function Header() {
           </button>
         </div>
 
-        {/* {Auth.loggedIn() ? (
-          <> */}
+         {Auth.loggedIn() ? (
+          <> 
 
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12" >
@@ -108,14 +108,14 @@ export default function Header() {
             </Transition>
           </Popover>
 
-          {/* <button className="btn btn-lg btn-light m-2" onClick={logout}>
+          <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </Popover.Group>
           </>
         ) : (
           <> 
-          <Popover.Group className="hidden lg:flex lg:gap-x-12" > */}
+          <Popover.Group className="hidden lg:flex lg:gap-x-12" >
 
           <Link to="/about" className="text-base font-semibold leading-6 hover:bg-green-900 rounded p-2">
             About
@@ -128,8 +128,8 @@ export default function Header() {
           </Link>
         </Popover.Group>
 
-        {/* </>
-        )} */}
+        </>
+        )} 
 
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -150,8 +150,8 @@ export default function Header() {
               <div>
                 <div className="space-y-2 py-6">
 
-                  {/* {Auth.loggedIn() ? (
-          <> */}
+                   {Auth.loggedIn() ? (
+          <> 
 
                   <Disclosure as="div" className="-mx-3 pl-3 pb-3">
                     {({ open }) => (
@@ -183,12 +183,12 @@ export default function Header() {
                     )}
                   </Disclosure>
 
-                  {/* <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                   <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
 \          </>
         ) : (
-          <> */}
+          <> 
 
                   <div>
                     <Link to="/about" className="mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 bg-green-100 my-2 inline-block hover:bg-gray-300">
@@ -208,8 +208,8 @@ export default function Header() {
                     </Link>
                   </div>
 
-                  {/* </>
-        )} */}
+                  </>
+        )} 
 
                 </div>
               </div>
