@@ -19,7 +19,7 @@ const Settings = () => {
 
     return (
 
-        <div style={style}>  
+        <div style={style} className='mt-20'>  
                           
             <AccountSettings />
             <ProfileSettings userId={user._id} />
