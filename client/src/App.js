@@ -13,8 +13,9 @@ import About from './pages/About';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import PersonalInfo from './components/PersonalInfo/PersonalInfo';
-import Preferences from './components/Preferences/Preferences';
-import Account from './components/Account/Account';
+// import Preferences from './components/Preferences/Preferences';
+import AccountSettings from './profile/AccountSettings';
+import DietSettings from './profile/DietSettings';
 import MealPlan from './components/MealPlan/MealPlan';
 import ProfileSettings from './profile/ProfileSettings';
 
@@ -99,20 +100,20 @@ function App() {
             element={<LowCarbDiet />}
           />
           <Route
-            path="/settings"
-            element={<Account />}
+            path="/dietsettings"
+            element={<DietSettings />}
           />
           <Route
             path="/personalinfo"
             element={<PersonalInfo />}
           />
           <Route
-            path="/preferences"
-            element={<Preferences />}
+            path="/profilesettings"
+            element={<ProfileSettings />}
           />
           <Route
-            path="/account"
-            element={<Account />}
+            path="/accountsettings"
+            element={<AccountSettings />}
           />
           <Route
             path="/mealplan"

@@ -18,9 +18,9 @@ import Auth from '../../utils/auth';
 
 const profile = [
   // { name: 'View Profile', description: 'View your Meal Train profile.', href: '/user/profile', icon: HiOutlineLockClosed },
-  { name: 'Account Settings', description: 'Update your name, email, password, or profile picture', href: '/account', icon: HiOutlineLockClosed },
-  { name: 'Personal Information', description: 'Update your height, weight, dob, or sex', href: '/personalinfo', icon: HiOutlineUser },
-  { name: 'Food Preferences', description: 'Choose a diet or foods to exclude from your meal plan', href: '/preferences', icon: HiOutlineAdjustments },
+  { name: 'Account Settings', description: 'Update your name, email, password, or profile picture', href: '/accountsettings', icon: HiOutlineLockClosed },
+  { name: 'Personal Information', description: 'Update your height, weight, dob, or sex', href: '/profilesettings', icon: HiOutlineUser },
+  { name: 'Food Preferences', description: 'Choose a diet or foods to exclude from your meal plan', href: '/dietsettings', icon: HiOutlineAdjustments },
   { name: 'Meal Plan', description: 'View your meal plan', href: '/mealplan', icon: SquaresPlusIcon },
 ]
 

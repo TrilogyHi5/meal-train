@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import UpdateUserName from './forms/UpdateUserName';
-import { validateEmail, validateName } from '../../utils/utils';
+import { validateEmail, validateName } from '../utils/utils';
 
 const AccountSettings = () => {
 
