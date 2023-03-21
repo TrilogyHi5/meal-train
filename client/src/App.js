@@ -85,20 +85,36 @@ function App() {
             element={<Signup />}
           />
           <Route
-            path="/plans/maintenance-diet"
+          path="/maintenancediet"
             element={<MaintenanceDiet />}
           />
           <Route
-            path="/plans/mediterranean-diet"
+            path="/mediterraneandiet"
             element={<MediterraneanDiet />}
           />
           <Route
-            path="/plans/lowcarb-diet"
+            path="/lowcarbdiet"
             element={<LowCarbDiet />}
           />
           <Route
             path="/settings"
             element={<Account />}
+          />
+          <Route
+            path="/personalinfo"
+            element={<PersonalInfo />}
+          />
+          <Route
+            path="/preferences"
+            element={<Preferences />}
+          />
+          <Route
+            path="/account"
+            element={<Account />}
+          />
+          <Route
+            path="/mealplan"
+            element={<MealPlan />}
           />
         </Routes>
         <Footer />
