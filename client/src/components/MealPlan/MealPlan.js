@@ -1,9 +1,9 @@
-import {image1} from "../../utils/images/mealplan1"
-import {image2} from "../../utils/images/mealplan2"
-import {image3} from "../../utils/images/mealplan3"
-import {image4} from "../../utils/images/mealplan4"
-import {image5} from "../../utils/images/mealplan5"
-import {image6} from "../../utils/images/mealplan6"
+import image1 from "../../utils/images/mealplan1.jpg"
+import image2 from "../../utils/images/mealplan2.jpg"
+import image3 from "../../utils/images/mealplan3.jpg"
+import image4 from "../../utils/images/mealplan4.jpg"
+import image5 from "../../utils/images/mealplan5.jpg"
+import image6 from "../../utils/images/mealplan6.jpg"
 
 export default function MealPlan() {
     
