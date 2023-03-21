@@ -12,7 +12,7 @@ const people = [
     name: 'Andy Phinney',
     role: 'Content Developer',
     imageUrl: andy,
-    link: ''
+    link: 'https://github.com/aphinney0516'
   },
   {
     name: 'Tori Booker',
@@ -24,19 +24,19 @@ const people = [
     name: 'Fiama Gaitan',
     role: 'Backend Developer',
     imageUrl: fiama,
-    link: ''
+    link: 'https://github.com/flgaitan'
   },
   {
     name: 'Maggie Matson',
     role: 'Frontend Developer',
     imageUrl: maggie,
-    link: ''
+    link: 'https://github.com/mmmatson'
   },
   {
     name: 'Jeffrey Gilbert',
     role: 'Frontend Developer',
     imageUrl: jeff,
-    link: ''
+    link: 'https://github.com/jcgilbert70'
   },
 ];
 
