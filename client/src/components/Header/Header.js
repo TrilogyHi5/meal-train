@@ -17,11 +17,11 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 
 const profile = [
-  { name: 'View Profile', description: 'View your Meal Train profile.', href: '/user/profile', icon: HiOutlineLockClosed },
-  { name: 'Account Settings', description: 'Update your name, email, password, or profile picture', href: '/user/edit-account', icon: HiOutlineLockClosed },
-  { name: 'Personal Information', description: 'Update your height, weight, dob, or sex', href: '/user/edit-profile', icon: HiOutlineUser },
-  { name: 'Food Preferences', description: 'Choose a diet or foods to exclude from your meal plan', href: '/user/edit-diet-settings', icon: HiOutlineAdjustments },
-  { name: 'Meal Plan', description: 'View your meal plan', href: '/user/meal-plan', icon: SquaresPlusIcon },
+  // { name: 'View Profile', description: 'View your Meal Train profile.', href: '/user/profile', icon: HiOutlineLockClosed },
+  { name: 'Account Settings', description: 'Update your name, email, password, or profile picture', href: '/account', icon: HiOutlineLockClosed },
+  { name: 'Personal Information', description: 'Update your height, weight, dob, or sex', href: '/personalinfo', icon: HiOutlineUser },
+  { name: 'Food Preferences', description: 'Choose a diet or foods to exclude from your meal plan', href: '/preferences', icon: HiOutlineAdjustments },
+  { name: 'Meal Plan', description: 'View your meal plan', href: '/mealplan', icon: SquaresPlusIcon },
 ]
 
 function classNames(...classes) {
