@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-async function GetFoodDislikes (userId) {
+async function GetFoodDislikes (userId) { //apiId
 
     // Retrieve the list of all ingredients that will be excluded from user's diets.
 
