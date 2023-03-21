@@ -8,6 +8,7 @@ const PersonalInfo = () => {
   
   return (
     <>
+    <div className='mt-20 p-8'>
       <div className="mt-20 p-8">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
@@ -143,6 +144,7 @@ const PersonalInfo = () => {
             )} */}
           </div>
         </div>
+      </div>
       </div>
     </>
 

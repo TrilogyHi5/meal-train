@@ -76,6 +76,7 @@ export default function Preferences() {
     return (
 
         <>
+        <div className='mt20 p-8'>
             <div className='bg-h-screen bg-white'>
                 <div className="mt-20 p-8">
 
@@ -163,6 +164,7 @@ export default function Preferences() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )

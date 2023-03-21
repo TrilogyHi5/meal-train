@@ -3,11 +3,11 @@
 export default function MealPlan() {
     
     const meals = [
-        { name: 'Breakfast', ingredient: "PLACEHOLDER FOR API DATA"},
-        { name: 'Snack', ingredient: 'PLACEHOLDER FOR API DATA' },
-        { name: 'Lunch', ingredient: 'PLACEHOLDER FOR API DATA' },
-        { name: 'Dinner', ingredient: 'PLACEHOLDER FOR API DATA' },
-        { name: 'Snack', ingredient: 'PLACEHOLDER FOR API DATA' },
+        { name: 'Breakfast', ingredient: "140g Kale, 150g, Cucumbers, 92g Lettuce, 104g Fish"},
+        { name: 'Snack', ingredient: '107g Strawberries, 58g Red Peppers, 68g Fish, 12g Seeds' },
+        { name: 'Lunch', ingredient: '64g Bananas, 224g Lettuce, 60g Tomatoes, 119g Fish, 12g Oils' },
+        { name: 'Dinner', ingredient: '133g Red Peppers, 173g Chicken' },
+        { name: 'Snack', ingredient: '200g Romain Lettuce, 100g Turkey, 28g Cheese' },
       ]
       
       return (
