@@ -105,7 +105,7 @@ function HomePage() {
         <div className="flex-1 mr-6">
           <img className="w-full" src={sustainable} alt="Placeholder image" />
         </div>
-        <div className="flex-1  rounded-3xl bg-green-100 opacity-80 px-2">
+        <div className="flex-1  rounded-3xl bg-green-100 opacity-80 px-2 ">
           <h1 className="text-3xl font-bold mb-4">Sustainable</h1>
           <p className="mb-4">
             The nutritional plan is customized according to your food preferences,
