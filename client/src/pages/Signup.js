@@ -53,7 +53,7 @@ const Signup = () => {
           <div>{data ? (
             <p>
               Success! Next head to {' '}
-              <Link to="/settings"> the settings.</Link>
+              <Link to="/profilesettings"> the settings.</Link>
             </p>
           ) : (
             <form onSubmit={handleFormSubmit} action="#" method="POST" className="mx-auto max-w-xl">
