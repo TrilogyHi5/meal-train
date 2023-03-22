@@ -17,7 +17,7 @@ async function GetDietDay (userId, dayIndex) {
 
     const response = await axios.request(options);
     const userInfo = response.data;
-    console.log(userInfo);
+    //console.log(userInfo);
 
     return userInfo;
 };

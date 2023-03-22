@@ -35,17 +35,6 @@ const resolvers = {
         addUser: async (parent, { firstName, lastName, email, password }) => {
             console.log(firstName, lastName, email, password, "First and last name")
 
-            // if (!firstName || !lastName || !email || !password) {
-            //     return 'Please provide valid credentials';
-            // }
-
-            // Check if there is a user with the same email
-            // const foundUser = await User.findOne({ email });
-
-            // if (foundUser) {
-            //     return 'Email is already in use';
-            // }
-
             const user = await User.create({ firstName, lastName, email, password });
             const token = signToken(user);
             console.log(token);
@@ -66,7 +55,6 @@ const resolvers = {
             }
 
             const token = signToken(user);
-            // return { user };
             return { token, user };
         },
 
@@ -134,36 +122,6 @@ const resolvers = {
     },
 
 };
-
-//<-------------------------------------just-in-case- CODE------------------------------------------------------------------------------->
-
-// delete user
-
-// removeUser: async (parent, { userId }) => {
-//     return User.findByIdAndDelete({ _id: userId });
-// },
-
-// updateUser: async (parent, { firstName, lastName, email, password }) => {
-//     const updatedUser = await User.findOneAndUpdate({ firstName, lastName, email, password });
-//     //const token = signToken(updatedUser);
-//     //return { token, updatedUser };
-// },
-
-// post create user meal plan --> built with api?
-
-
-
-// put update user
-
-// put food preference
-
-// put generate new user diet
-
-// put replace ingredient in existing diet
-
-// delete meal plan
-
-// delete user
 
 
 

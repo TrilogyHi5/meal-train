@@ -11,9 +11,10 @@ import { gql } from '@apollo/client';
 //   }
 // `;
 
+//Correct Query - edited 3/21
 export const QUERY_SINGLE_USER = gql`
   query singleUser($userId: ID!) {
-    user(userId: $profileId) {
+    user(userId: $userId) {
       _id
       email
       meals
