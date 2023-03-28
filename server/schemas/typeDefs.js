@@ -1,3 +1,5 @@
+TYPEDEFS
+
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -14,7 +16,7 @@ const typeDefs = gql`
         dateOfBirth: String
         createdAt: String
         activityLevel: String
-        preferences: [Preference]!
+        preferences: String!
         meals: [MealPlan]!
     }
 
@@ -38,11 +40,11 @@ const typeDefs = gql`
     }
 
     type Query {
-        user(userId: ID!): User
+        user: User
         meals: [MealPlan]
-        #users(): [User]
+        users(): [User]
         #Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
-        #me: User (hold for JWT integration)
+        me: User 
     }
 
     type Mutation {

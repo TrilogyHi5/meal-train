@@ -24,7 +24,7 @@ async function NewUser (query) {
 
     const response = await axios.request(options);    
     const userInfo = response.data.id;
-    console.log(userInfo);
+    //console.log(userInfo);
 
     // send user id to mongodb
     return userInfo;

@@ -30,7 +30,7 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    //console.log(formState);
 
     try {
       const { data } = await login({
@@ -127,3 +127,6 @@ const Login = (props) => {
 };
 
 export default Login;
+
+
+

@@ -41,16 +41,21 @@
   - Once, you're a new member you will fill out a questionnaire-like form that will indicate your dietary preferences.
   - After dietary preferences have been filled out, a meal plan will be formulated that will contain meal times along with diet type, weight goal and duration. Duration can be daily or weekly.
 
+  Usage Video Demo:
+  https://www.youtube.com/watch?v=dCfmBWlSi-0
+
 
   ## Credits
 
   Any questions about this project please contact the creator aphinney0516 at: aphinney0516@gmail.com
 
-  Any questions about this project please contact the creator ebonygrrl at: abooker77@yahoo.com
+  Any questions about this project please contact the creator ebonygrrl at: 
+  abooker77@yahoo.com
   
   Any questions about this project please contact the creator flgaitan at: fiama_gaitan92@hotmail.com
 
-  Any questions about this project please contact the creator mmmatson at: margaret.m.matson@gmail.com
+  Any questions about this project please contact the creator mmmatson at: 
+  margaret.m.matson@gmail.com
 
   Any questions about this project please contact the creator jcgilbert70 at: jcgilbert70@gmail.com
 
@@ -72,11 +77,12 @@
   - (https://opensource.org/licenses/MIT)
 
 
-🏆 
+## Features 🏆
 
-## Features
-
-  - If your project has a lot of features, list them here.
+  - Feature Diets
+  - User forms
+  - Future developments
+  - Unique fav icon (animated)
 
  
   ## Contributing
@@ -87,7 +93,7 @@
   
   ## Screenshots
 
-  < insert images >
+   ![alt text](./client/src/utils/images/SCREENSHOT.MEAL-TRAIN%20FINAL.png) 
 
   ## Links
 
@@ -96,6 +102,9 @@
 
   Repository: 
   < https://github.com/TrilogyHi5/meal-train >
+
+  Video demo:
+  < https://www.youtube.com/watch?v=dCfmBWlSi-0 >
  
 
 

@@ -26,7 +26,7 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState, "formstate");
+    //console.log(formState, "formstate");
 
     try {
       const { data } = await addUser({
@@ -145,3 +145,4 @@ const Signup = () => {
   )
 }
 export default Signup;
+

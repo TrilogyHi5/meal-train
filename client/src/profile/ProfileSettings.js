@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useQuery } from '@apollo/client';
 import { useMutation } from '@apollo/client';
 import AddUserInfo from './forms/AddUserInfo';
 import NewUser from './api/ApiAddUser';
 import { convertWeightToImperial, convertHeightToImperial } from '../utils/utils';
 import { ADD_API_ID } from '../utils/mutations';
+import { QUERY_SINGLE_USER } from '../utils/queries';
 
 const ProfileSettings = () => {
     
@@ -51,8 +53,9 @@ const ProfileSettings = () => {
 
         // send user's additional info to Rapid API in order to get their user ID
         const userId = NewUser({ height, weight, dateOfBirth, sex, activityLevel });
+        //***const userId = await NewUser({ height, weight, dateOfBirth, sex, activityLevel });
 
-        console.log(userId); /// MONGO ID / API ID
+        //console.log(userId); /// MONGO ID / API ID
 
         // GET THE MONGO ID TO SEND THE API ID
 
@@ -62,20 +65,19 @@ const ProfileSettings = () => {
             })
             console.log('string', data);
         } catch (error) {
-            console.log(error.message);
+            //console.log(error.message);
         }
-
-        
-        // On form submit, perform mutation and pass in form data object as arguments
-        // It is important that the object fields are match the defined parameters in `ADD_THOUGHT` mutation
+         //***this IS*** the try-catch that works to get the API userID from the API.
         // try {
-        //     const { data } = addThought({
-        //         variables: { ...formState },
-        //     });
+        //     const {data} = addApiId({
+        //         variables: { apiId: userId }
+        //     })
 
-        // } catch (err) {
-        //     console.error(err);
+        //     console.log('string', data);
+        // } catch (error) {
+        //     console.log(error.message);
         // }
+  
     };
 
     const style = { margin: '0 auto', width: '80%' };

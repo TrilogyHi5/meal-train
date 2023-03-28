@@ -16,7 +16,7 @@ async function GetIngredients () {
 
     const response = await axios.request(options);
     const ingredientsList = response.data;
-    console.log(ingredientsList);
+    //console.log(ingredientsList);
 
     return ingredientsList;
 
